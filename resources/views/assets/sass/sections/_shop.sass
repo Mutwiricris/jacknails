@@ -1,0 +1,653 @@
+/*******************************************************/
+/*********************** ## Shop ***********************/
+/*******************************************************/
+.product-item
+    margin-bottom: 30px
+    +res-bl(sm)
+        +container(300px)
+    .image
+        padding-bottom: 110%
+        background: $lighter-color
+        +overlay(#FFE1E1, 0)
+        img
+            +abs-middle()
+            max-width: 80%
+            max-height: 80%
+        .social-style-two
+            z-index: 3
+            opacity: 0
+            +abs-middle()
+            max-width: 100%
+            transition: 0.5s
+            margin-top: -20px
+            width: max-content
+        .badges
+            position: absolute
+            top: 20px
+            left: 20px
+            z-index: 2
+            display: flex
+            flex-direction: column
+            span
+                color: white
+                font-size: 13px
+                font-weight: 500
+                line-height: 1.5
+                padding: 3px 10px
+                border-radius: 3px
+                margin-bottom: 5px
+                text-transform: uppercase
+        &:before
+            z-index: 1
+            transition: 0.5s
+    .content
+        padding: 20px 25px
+        border: 1px solid $border-color
+        border-top: none
+        .category
+            margin-bottom: 6px
+            display: inline-block
+        .prices
+            font-weight: 500
+            span
+                color: $heading-color
+            del
+                color: #AAAAAA
+    &:hover
+        .image
+            &:before
+                opacity: 0.8
+            .social-style-two
+                opacity: 1
+                margin-top: 0
+    &.style-two
+        display: flex
+        max-width: none
+        align-items: center
+        .image
+            width: 36%
+            flex: none
+            margin-right: 25px
+            padding-bottom: 39%
+            &:before
+                display: none
+        .content
+            padding: 0
+            border: none
+        &:not(:last-child)
+            margin-bottom: 25px
+            padding-bottom: 25px
+            border-bottom: 1px solid $border-color
+        &:last-child
+            margin-bottom: 0
+    &.style-three
+        .content
+            border: none
+            padding: 15px 0 0
+            text-align: center
+            .ratting
+                margin-bottom: 8px
+                .rated
+                    color: $heading-color
+            .prices
+                font-size: 16px
+                font-weight: 500
+                span
+                    font-size: 18px
+                    color: $primary-color
+        &.with-cart-btn
+            position: relative
+            .social-style-two
+                padding: 5px
+                background: white
+                border-radius: 30px
+                a
+                    margin: 3px
+                    color: white
+                    background: $primary-color
+                    &:hover
+                        background: $secondary-color
+            .prices
+                transition: 0.5s
+                transform: scale(1)
+            .add-to-cart
+                left: 50%
+                bottom: 0
+                font-size: 14px
+                font-weight: 600
+                position: absolute
+                color: $secondary-color
+                text-transform: uppercase
+                text-decoration: underline
+                transform: translate(-50%) scale(0)
+            &:hover
+                .add-to-cart
+                    transform: translate(-50%) scale(1)
+                .prices
+                    transform: scale(0)
+                
+    &.product-list
+        padding: 20px
+        max-width: none
+        border: 1px solid $border-color
+        +res-ab(md)
+            display: flex
+            align-items: center
+        .image
+            +res-ab(md)
+                flex: none
+                width: 30%
+                margin-right: 30px
+                padding-bottom: 35%
+            +res-bl(xl)
+                padding-bottom: 55%
+            +res-bl(md)
+                margin-bottom: 15px
+            +res-bl(sm)
+                padding-bottom: 75%
+            +res-bl(ms)
+                padding-bottom: 100%
+            &:before
+                display: none
+        .content
+            padding: 0
+            border: none
+            .ratting
+                margin-bottom: 5px
+            h6
+                +res-ab(xs)
+                    font-size: 18px
+            hr
+                margin-bottom: 20px
+            .cart-btns
+                .theme-btn
+                    font-size: 14px
+                    margin-top: 10px
+                    padding: 9px 20px
+                    border-radius: 3px
+                    margin-right: 10px
+                    +res-bl(xs)
+                        margin-bottom: 10px
+                    i
+                        margin-top: -1px
+                        margin-right: 5px
+                br
+                    +res-ab(xs)
+                        display: none
+                button
+                    +size(43px)
+                    font-size: 18px
+                    margin-top: 10px
+                    line-height: 43px
+                    text-align: center
+                    margin-right: 10px
+                    background: $lighter-color
+        
+/* Product Style Two */
+.product-item-two
+    padding: 15px 30px 35px
+    border: 1px solid $border-color
+    +res-bl(ms)
+        +container(300px)
+    .image
+        position: relative
+        margin-bottom: 15px
+        padding-bottom: 100%
+        img
+            +abs-middle()
+            max-height: 100%
+        .badges
+            position: absolute
+            left: -10px
+            top: 4px
+            z-index: 2
+            span
+                color: white
+                font-size: 13px
+                font-weight: 500
+                padding: 5px 10px
+                border-radius: 3px
+                text-transform: uppercase
+                &:not(:last-child)
+                    margin-right: 3px
+        .social-style-two
+            position: absolute
+            left: 25px
+            opacity: 0
+            bottom: 8%
+            display: flex
+            transition: 0.5s
+            flex-direction: column
+            a
+                margin: 5px 0 0
+                border: 1px solid $border-color
+                &:hover
+                    border-color: $primary-color
+    .content
+        position: relative
+        .category
+            font-size: 14px
+            margin-bottom: 6px
+            display: inline-block
+        .ratting
+            margin-bottom: 8px
+        .prices
+            display: flex
+            align-items: center
+            del
+                color: #AAAAAA
+                margin-right: 5px
+            b
+                font-size: 18px
+                font-weight: 500
+                color: $heading-color
+        .add-to-cart
+            left: 0
+            bottom: 0
+            opacity: 0
+            color: white
+            font-size: 14px
+            font-weight: 500
+            padding: 7px 17px
+            border-radius: 5px
+            position: absolute
+            align-items: center
+            display: inline-flex
+            text-transform: uppercase
+            background: $primary-color
+            i
+                font-size: 16px
+                margin-right: 5px
+    &:hover
+        .social-style-two
+            left: 0
+            opacity: 1
+        .add-to-cart
+            opacity: 1
+            bottom: -15px
+            
+.product-tab-slider
+    .slick-list
+        padding-right: 3px
+        margin-right: -3px
+        padding-bottom: 1px
+        .product-item-two
+            margin: 0 -1px -1px 0
+            height: calc(100% + 1px)
+            width: calc(100% + 1px) !important
+            
+.products-tab-slider-part
+    position: relative
+    .arrows-btn-one
+        position: absolute
+        top: 6px
+        right: 0
+    .tab-content
+        +res-bl(sm)
+            max-width: 300px
+            
+.tab-and-arrow
+    margin-right: 35px
+    
+/* product of the month tab */
+.month-product-tab-part
+    .arrows-btn-one
+        position: absolute
+        right: 15px
+        top: 6px
+.month-product-tab-slider
+    +res-bl(sm)
+        max-width: 300px
+    .slick-list
+        padding-right: 5px
+        margin-right: -5px
+        padding-bottom: 1px
+        +res-bl(sm)
+            margin-right: -1px
+            padding-right: 1px
+    .slick-track
+        display: flex
+        .slick-slide
+            height: auto
+            > div
+                height: 50%
+                .product-item-two
+                    margin: 0 -1px -1px 0
+                    height: calc(100% + 1px)
+                    width: calc(100% + 1px) !important
+      
+/* Product Item Three */
+.product-item-three
+    padding: 30px
+    height: 100%
+    margin: 0 -1px -1px 0
+    border: 1px solid $border-color
+    +res-ab(xs)
+        display: flex
+        align-items: center
+    +res-bl(ms)
+        +gapLR(padding, 20px)
+    .image
+        width: 30%
+        margin-right: 5%
+        +res-bl(xs)
+            width: auto
+            margin-right: 0
+            margin-bottom: 15px
+    .content
+        .category
+            font-size: 14px
+            margin-bottom: 4px
+            display: inline-block
+        h6
+            margin-bottom: 6px
+        .prices
+            margin-top: 4px
+            del
+                color: #AAAAAA
+            b
+                font-size: 18px
+                font-weight: 500
+                color: $heading-color
+
+.new-popular-brand
+    padding: 30px
+    background: white
+    +res-bl(ms)
+        +gapLR(padding, 20px)
+    .slick-list
+        padding-right: 2px
+        margin-right: -2px
+        padding-bottom: 1px
+    .product-item-three
+        width: calc(100% + 1px) !important
+        +res-ab(xs)
+            height: 182px
+            display: flex !important
+.new-popular-brand-area
+    .new-popular-brand-bg
+        position: absolute
+        +size(100%, 133%)
+        left: 0
+        bottom: 0
+        z-index: -1
+ 
+/* Product Item Four */
+.most-best-top-wrap
+    padding: 30px 35px
+    border: 1px solid $border-color
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    .title-with-btn
+        h5
+            margin-top: -4px
+    .product-item-four
+        display: flex !important
+.product-item-four
+    display: flex
+    margin-top: 20px
+    padding-top: 20px
+    align-items: center
+    border-top: 1px solid $border-color
+    .image
+        +size(100px)
+        padding: 10px
+        margin-right: 25px
+        +flexcenter(center)
+        background: $lighter-color
+        +res-bl(xs)
+            width: 90px
+            margin-right: 15px
+    .content
+        .ratting
+            margin-bottom: 7px
+            .rated
+                color: $heading-color
+        h6
+            margin-bottom: 7px
+            +res-bl(xs)
+                font-size: 14px
+        .prices
+            font-size: 18px
+            font-weight: 500
+            color: $primary-color
+            
+/* Best Seller Products */
+.best-seller-products
+    border-radius: 5px
+    padding: 45px 28px 30px
+    border: 2px solid $primary-color
+.best-seller-btns
+    display: flex
+    align-items: center
+    button
+        padding: 0
+        color: #888888
+        background: transparent
+    .dot
+        +size(8px)
+        border-radius: 50%
+        +gapLR(margin, 8px)
+        background: #D9D9D9
+    
+.best-seller-item
+    .image
+        text-align: center
+        position: relative
+        margin-bottom: 20px
+        padding-bottom: 75px
+        border-bottom: 1px solid $border-color
+        .offer-text
+            position: absolute
+            left: 22%
+            bottom: 35px
+            color: white
+            +size(100px)
+            padding: 10px
+            font-size: 24px
+            font-weight: 700
+            line-height: 1.2
+            text-align: center
+            border-radius: 50%
+            +flexcenter(center)
+            background: $primary-color
+            font-family: $heading-font
+    .content
+        .category
+            font-size: 14px
+        h5
+            margin-bottom: 6px
+        .status
+            display: block
+            margin-bottom: 12px
+            span
+                color: #04BA01
+                font-size: 16px
+                font-weight: 500
+        .prices
+            font-size: 18px
+            margin-bottom: 22px
+            b
+                font-weight: 600
+                margin-right: 10px
+                color: $primary-color
+            del
+                color: #AAAAAA
+        .availabe
+            display: block
+            font-size: 16px
+            margin-bottom: 10px
+        .progress
+            height: 10px
+            border-radius: 5px
+            margin-bottom: 30px
+            background: $lighter-color
+            .progress-bar
+                border-radius: 5px
+                background: $primary-color
+        .hurrry-up-text
+            font-size: 16px
+            font-weight: 500
+        .count-down
+            margin-top: 5px
+            margin-bottom: 15px
+    &.style-two
+        padding: 35px
+        border-radius: 5px
+        margin-bottom: 30px
+        border: 2px solid $primary-color
+        +res-ab(ms)
+            display: flex
+            align-items: center
+        +res-bl(xs)
+            +gapLR(padding, 25px)
+        .image
+            padding: 0
+            border: none
+            max-width: 36%
+            margin: 0 7% 0 0
+            +res-bl(ms)
+                max-width: none
+                margin: 0 0 20px
+        .content
+            .category
+                margin-bottom: 5px
+                display: inline-block
+            .ratting
+                margin-bottom: 8px
+            .prices
+                margin-bottom: 12px
+            .count-down
+                +res-ab(xs)
+                    flex-wrap: nowrap
+                li
+                    color: white
+                    background: $heading-color
+                    span
+                        color: white
+            
+/* New Top Products */
+.new-top-products
+    padding: 30px
+    border: 1px solid $border-color
+    +res-bl(xs)
+        +gapLR(padding, 15px)
+        
+/* Deal of day */
+.deal-of-day-slider
+    +gapLR(margin, -15px)
+    .best-seller-item
+        +gapLR(margin, 15px)
+        
+/* Top Selling Product */
+.top-selling-product-slider
+    +gapLR(margin, -15px)
+    +res-bl(sm)
+        max-width: 350px
+    .slick-track
+        display: flex
+    .product-item-two
+        border: none
+        height: auto
+        background: white
+        +gapLR(margin, 15px)
+        +res-bl(sm)
+            max-width: 100%
+            
+/* Recent View Slider */
+.recent-view-slider
+    +res-bl(sm)
+        max-width: 350px
+    .slick-list
+        padding-right: 3px
+        margin-right: -3px
+        padding-bottom: 1px
+        .product-item-two
+            height: auto
+            margin: 0 -1px -1px 0
+            width: calc(100% + 1px)
+            +res-bl(ms)
+                max-width: 100%
+    .slick-track
+        display: flex
+        
+/* Shop Shorter */
+.shop-shorter
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    .sort-text
+        margin-right: auto
+    .grid-list
+        display: flex
+        margin-right: 30px
+        align-items: center
+        +res-bl(md)
+            margin-right: 0
+        li
+            margin-left: 10px
+            a
+                +size(40px)
+                font-size: 18px
+                line-height: 40px
+                text-align: center
+                color: $heading-color
+                display: inline-block
+                background: $lighter-color
+                &.active
+                    color: white
+                    background: $heading-color
+    .products-dropdown
+        display: flex
+        align-items: center
+        .sort-by
+            flex: none
+            font-weight: 500
+            margin-right: 15px
+            color: $heading-color
+        .nice-select
+            font-size: 14px
+            border-radius: 0
+            min-width: 200px
+            padding: 10px 45px 10px 15px
+            &:after
+                +size(7px)
+                right: 15px
+                margin-top: -5px
+                border-width: 1px
+            
+/* Shop Category */
+.shop-category-active
+    border: 1px dashed
+    .shop-category-item
+        +gapLR(margin, 50px)
+    .slick-arrow
+        z-index: 1
+        transition: 0.5s
+        position: absolute
+        border-radius: 50%
+        +circle(white, 45px)
+        top: calc(50% - 22.5px)
+        box-shadow: 0px 0px 10px rgba(44, 45, 54, 0.1)
+        &:focus
+        &:hover
+            color: white
+            background: $primary-color
+        &.shop-category-prev
+            left: -22.5px
+        &.shop-category-next
+            right: -22.5px
+
+.shop-category-item
+    text-align: center
+    padding-bottom: 30px
+    .icon
+        +size(100px)
+        +flexcenter(center)
+        border-radius: 50%
+        margin-bottom: 22px
+        +gapLR(margin, auto)
+        
+/* Product Filter Area */
+.product-filter-active
+        

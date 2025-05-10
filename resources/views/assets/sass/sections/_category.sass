@@ -1,0 +1,60 @@
+/*******************************************************/
+/********************* ## Category *********************/
+/*******************************************************/
+.category-item
+    position: relative
+    margin-bottom: 20px
+    img
+        width: 100%
+        min-height: 150px
+    .category-content
+        position: absolute
+        left: 30px
+        bottom: 30px
+        max-width: calc(100% - 60px)
+        +res-bl(md)
+            left: 20px
+            bottom: 20px
+            max-width: calc(100% - 40px)
+        h5
+            background: white
+            margin-bottom: 5px
+            padding: 12px 20px
+            text-transform: uppercase
+            +res-bl(xs)
+                font-size: 16px
+        &.top-right
+            top: 60px
+            right: 60px
+            left: auto
+            +res-bl(md)
+                top: 20px
+                right: 20px
+                
+/* Product Category */
+.product-category-item
+    padding: 20px
+    margin-bottom: 30px
+    height: calc(100% - 30px)
+    border: 1px solid $border-color
+    +res-ab(ms)
+        display: flex
+        align-items: center
+    .image
+        flex: none
+        width: 50%
+        margin-right: 8%
+        +res-bl(ms)
+            width: 100%
+            margin: 0 0 25px
+    .content
+        h6
+            font-size: 18px
+            margin-bottom: 13px
+        .list-style-one
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            li
+                width: 48%
+                margin-top: 5px

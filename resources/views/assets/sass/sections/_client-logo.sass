@@ -1,0 +1,62 @@
+/*******************************************************/
+/******************** ## Client Logo *******************/
+/*******************************************************/
+.client-logo-item
+    margin-bottom: 30px
+    text-align: center
+    img
+        display: inline-block
+        
+.client-logo-wrap
+    +gapLR(margin, -15px)
+    .client-logo-item
+        +gapLR(margin, 15px)
+        
+/* Client Logo */
+.client-logo-two
+    padding: 30px
+    transition: 0.5s
+    position: relative
+    text-align: center
+    margin: 0 -1px -1px 0
+    border: 1px solid $border-color
+    img
+        transition: 0.5s
+        display: inline-block
+        filter: contrast(0.25)
+    &:hover
+        z-index: 2
+        border-color: $primary-color
+        img
+            filter: contrast(1)
+        
+.client-logo-two-wrap
+    .slick-list
+        padding-bottom: 1px
+        padding-right: 3px
+        margin-right: -3px
+    .slick-track
+        display: flex
+        .client-logo-two
+            height: auto
+            +flexcenter(center)
+                
+/* Popular Brands */
+.popular-brands-inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +gapLR(margin, -10px)
+    .popular-brand-item
+        padding: 22px
+        +flexcenter(center)
+        margin-bottom: 20px
+        +gapLR(margin, 10px)
+        width: calc(20% - 20px)
+        border: 1px solid $border-color
+        +res-bl(xl)
+            width: calc(25% - 20px)
+        +res-bl(lg)
+            width: calc(33.3333% - 20px)
+        +res-bl(ms)
+            width: calc(50% - 20px)

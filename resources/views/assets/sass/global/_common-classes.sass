@@ -1,0 +1,637 @@
+/*******************************************************/
+/*****************  ## Common Classes *****************/
+/*******************************************************/
+.page-wrapper
+    position: relative
+    z-index: 9
+    width: 100%
+    margin: 0 auto
+    overflow: hidden
+    min-width: 300px
+    
+.container
+    +res-ab(xl)
+        max-width: $container
+        padding-left: $gutter/2
+        padding-right: $gutter/2
+        
+.container-1440
+    +res-ab(xl)
+        max-width: 1470px
+        
+.container-1620
+    +res-ab(lb)
+        max-width: 1650px
+                
+.container-1720
+    +res-ab(lb)
+        max-width: 1750px
+        
+.container-fluid
+    +res-ab(xxl)
+        +gapLR(padding, 30px)
+     
+.col-small
+    +res-bl(xs)
+        flex: 0 0 100%
+        max-width: 100%
+        
+.row
+    --bs-gutter-x: 30px
+
+@for $i from 4 through 10
+    .gap-#{10 * $i}
+        +res-ab(xxl)
+            --bs-gutter-x: #{10px * $i}
+        
+@for $i from 0 through 2
+    .gap-#{10 * $i}
+        --bs-gutter-x: #{10px * $i}
+    
+.row-cols-xl-7
+    > *
+        +res-ab(xl)
+            width: 14.2857%
+            flex: 0 0 auto
+.row-cols-xxxl-5
+    > *
+        +res-ab(lb)
+            width: 20%
+            flex: 0 0 auto
+.row-cols-small
+    > *
+        +res-bl(ms)
+            width: 100%
+            flex: 0 0 auto
+    
+/** Section Title style **/
+.section-title
+    margin-top: -10px
+    .sub-title
+        font-size: 20px
+        font-weight: 700
+        color: $heading-color
+        display: inline-block
+        text-transform: uppercase
+    h2
+        margin-bottom: 18px
+        text-transform: uppercase
+        +res-bl(md)
+            font-size: 35px
+        +res-bl(ms)
+            font-size: 30px
+    h3
+        margin-bottom: 15px
+        text-transform: uppercase
+        +res-bl(md)
+            font-size: 30px
+        +res-bl(ms)
+            font-size: 25px
+    p
+        font-size: 16px
+        
+/* Title With Btn */
+.title-with-btn
+    display: flex
+    justify-content: space-between
+    h4
+        text-transform: uppercase
+   
+/** Button style **/
+.theme-btn,
+a.theme-btn
+    z-index: 1
+    color: white
+    cursor: pointer
+    overflow: hidden
+    font-size: 14px;
+    transition: 0.5s
+    font-weight: 500
+    border-radius: 5px
+    text-align: center
+    padding: 12px 35px
+    align-items: center
+    position: relative
+    display: inline-flex
+    justify-content: center
+    text-transform: uppercase
+    background: $primary-color
+    &:hover
+        background: $heading-color
+    &.style-two
+        background: $heading-color
+        &:hover
+            background: $primary-color
+    &.style-three
+        font-size: 14px
+        font-weight: 600
+        color: $heading-color
+        background: transparent
+        border: 2px solid $heading-color
+        &:hover
+            color: white
+            background: $heading-color
+    &.style-four
+        border-radius: 3px
+        background: #FED604
+        color: $heading-color
+        &:hover
+            color: white
+            background: $primary-color
+    &.style-five
+        border-radius: 25px
+        &:not(:hover)
+            background: $secondary-color
+    &.style-six
+        padding: 8px 30px
+        border-radius: 25px
+        background: transparent
+        border: 2px solid white
+        &:hover
+            background: white
+            color: $heading-color
+    &.big-btn
+        font-size: 24px
+        +res-ab(xs)
+            +gapTB(padding, 15px)
+        +res-bl(xs)
+            font-size: 20px
+    +res-bl(sm)
+        padding: 9px 25px
+        
+.btn-style-two
+    font-size: 14px
+    font-weight: 600
+    background: white
+    padding: 10px 30px
+    display: inline-block
+    color: $heading-color
+    text-transform: uppercase
+    &:hover
+        color: white
+        background: $primary-color
+    +res-bl(xs)
+        padding: 8px 25px
+
+/* Details Btn */
+.details-btn
+    font-size: 22px
+    +circle(white, 70px)
+    display: inline-block
+    color: $primary-color
+    +res-bl(ms)
+        +size(45px)
+        font-size: 16px
+        line-height: 45px
+
+/* Read More */
+.read-more
+    font-size: 14px
+    font-weight: 500
+    align-items: center
+    display: inline-flex
+    text-transform: uppercase
+    &:before
+        content: ''
+        margin-top: 5px
+        +size(20px, 1px)
+        margin-right: 6px
+        background: $base-color
+      
+/* List style One */
+.list-style-one
+    li
+        margin-top: 5px
+    
+/* List style Two */
+.list-style-two
+    li
+        &:not(:last-child)
+            margin-bottom: 10px
+        
+/* List style three */
+.list-style-three
+    li
+        display: flex
+        margin-bottom: 20px
+        &:before
+            content: '\f00c'
+            margin-right: 8px
+            color: $primary-color
+            font-family: 'Font Awesome 5 Pro'
+        
+/* Category List */
+.category-list
+    > li
+        +gapTB(padding, 16.6px)
+        &:not(:last-child)
+            border-bottom: 1px solid $border-color
+        a
+            display: flex
+            align-items: center
+            i
+                font-size: 20px
+                margin-right: 13px
+    .dropdown
+        position: relative
+        > a
+            padding-right: 15px
+        ul
+            display: none
+            margin-top: 10px
+            margin-left: 15px
+            li
+                padding: 5px 0
+                
+        .dropdown-btn
+            position: absolute
+            cursor: pointer
+            line-height: 1
+            top: 23px
+            right: 0
+            font-size: 13px
+            transition: 0.5s
+            transform: rotate(-90deg)
+            &.active
+                transform: rotate(0)
+        
+/** Social Link One **/
+.social-style-one
+    flex-wrap: wrap
+    display: inline-flex
+    +gapLR(margin, -5px)
+    a
+        color: white
+        +circle(#383838, 40px)
+        +gapLR(margin, 5px)
+        &:hover
+            background: white
+            color: $primary-color
+        
+/** Social Link Two **/
+.social-style-two
+    flex-wrap: wrap
+    display: inline-flex
+    +gapLR(margin, -5px)
+    a
+        margin: 10px 5px 0
+        +circle(white, 44px)
+        color: $heading-color
+        &:hover
+            color: white
+            background: $primary-color
+        
+/* Video Play */
+.video-play
+    z-index: 1
+    +size(100px)
+    line-height: 90px
+    position: relative
+    border-radius: 50%
+    text-align: center
+    display: inline-block
+    color: $primary-color
+    border: 5px solid rgba(255, 255, 255, 0.7)
+    &:before
+        content: ''
+        +size(72px)
+        z-index: -1
+        +abs-middle()
+        background: white
+        border-radius: 50%
+    +res-bl(ms)
+        +size(80px)
+        line-height: 70px
+        
+/*** Preloader style ** */
+.preloader
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 9999999
+    background-color: #FFFFFF
+    background-repeat: no-repeat
+    background-position: center center
+    background-image: none
+    &:after
+        content: ''
+        +size(50px)
+        position: absolute
+        border-radius: 50%
+        top: calc(50% - 25px)
+        left: calc(50% - 25px)
+        border: 3px dashed $primary-color
+        animation: rotated_scale 5s infinite ease-in-out
+
+/* Pagination */    
+.pagination
+    align-items: center
+    +gapLR(margin, -5px)
+    li
+        margin: 10px 5px 0
+        a,
+        .page-link
+            padding: 0
+            +size(50px)
+            border: none
+            font-size: 14px
+            box-shadow: none
+            font-weight: 500
+            line-height: 50px
+            text-align: center
+            border-radius: 50%
+            color: $heading-color
+            background: $lighter-color
+            +res-bl(xs)
+                +size(40px)
+                font-size: 12px
+                line-height: 40px
+        &:last-child,
+        &:first-child
+            .page-link
+                border-radius: 50%
+        &.active,
+        &:hover:not(.disabled)
+            .page-link
+                color: white
+                background: $primary-color
+    &.style-two
+        li
+            .page-link
+                +size(44px)
+                line-height: 44px
+                +res-bl(xs)
+                    +size(35px)
+                    line-height: 35px
+            &:last-child,
+            &:first-child
+                .page-link
+                    width: auto
+                    padding: 0 15px
+                    font-weight: 500
+                    border-radius: 0
+                    text-transform: uppercase
+            &:first-child
+                margin-right: auto
+            &:last-child
+                margin-left: auto
+        
+/* Rating */
+.ratting
+    i
+        color: #AAAAAA
+        font-size: 12px
+        display: inline-block
+        &.rated
+            color: #FFA818
+        &:not(:last-child)
+            margin-right: 1px
+                
+/*** Slick Dots ***/
+.slick-dots
+    flex-wrap: wrap
+    margin-top: 10px
+    +flexcenter(center)
+    li
+        position: relative
+        cursor: pointer
+        +size(10px)
+        transition: 0.5s
+        border-radius: 50%
+        margin: 7px 3.5px 0
+        background: #E0E0E0
+        button
+            opacity: 0
+        &.slick-active
+            background: $primary-color
+            
+/*Tab Style One*/
+.tab-btn-one
+    button
+        font-size: 14px
+        font-weight: 500
+        padding: 5px 17px
+        border-radius: 5px
+        margin-right: 10px
+        color: $base-color
+        margin-bottom: 10px
+        background: transparent
+        text-transform: uppercase
+        border: 1px dashed #535353
+        +res-bl(xs)
+            padding: 3px 15px
+        &:hover,
+        &.active
+            color: $primary-color
+            border-color: $primary-color
+            
+/*Tab Style Two*/
+.tab-btn-two
+    border-radius: 10px
+    display: inline-flex
+    background: $lighter-color
+    button
+        font-size: 16px
+        font-weight: 600
+        transition: 0.5s
+        padding: 16px 35px
+        border-radius: 10px
+        color: $heading-color
+        background: transparent
+        font-family: $heading-font
+        text-transform: capitalize
+        +res-bl(lg)
+            font-size: 14px
+            padding: 10px 25px
+        +res-bl(ms)
+            +gapLR(padding, 20px)
+        &:hover,
+        &.active
+            color: white
+            background: $primary-color
+            
+/*Tab Style Three*/
+.tab-btn-three
+    border-bottom: 1px solid $border-color
+    button
+        font-size: 16px
+        font-weight: 600
+        transition: 0.5s
+        padding: 17px 35px
+        margin-bottom: -1px
+        color: $heading-color
+        background: transparent
+        font-family: $heading-font
+        text-transform: capitalize
+        +res-bl(lg)
+            font-size: 14px
+            padding: 10px 25px
+        +res-bl(ms)
+            +gapLR(padding, 19px)
+        &:hover
+            color: $primary-color
+        &.active
+            color: white
+            background: $primary-color
+            
+/*Filter Btns One*/
+.filter-btns-one
+    display: flex
+    flex-wrap: wrap
+    +gapLR(mrgin, -5px)
+    justify-content: center
+    li
+        font-size: 14px
+        cursor: pointer
+        font-weight: 500
+        transition: 0.5s
+        padding: 5px 17px
+        border-radius: 18px
+        margin: 0 5px 10px
+        color: $base-color
+        margin-bottom: 10px
+        background: transparent
+        text-transform: uppercase
+        border: 1px dashed #535353
+        +res-bl(xs)
+            padding: 3px 15px
+        &:hover,
+        &.current
+            color: $primary-color
+            border-color: $primary-color
+            
+/* Arrows Btn One */
+.arrows-btn-one
+    button
+        font-size: 18px
+        background: transparent
+        &:not(:last-child)
+            margin-right: 3px
+        
+/* Arrows Btn Two */
+.arrows-btn-two
+    button
+        +size(25px)
+        line-height: 24px
+        text-align: center
+        border-radius: 50%
+        background: transparent
+        border: 1px solid $border-color
+        &:not(:last-child)
+            margin-right: 3px
+
+/*** Scroll Top style ***/
+.scroll-top
+    position: fixed
+    bottom: 25px
+    right: 0
+    +size(40px)
+    z-index: 99
+    color: white
+    display: none
+    font-size: 14px
+    cursor: pointer
+    line-height: 40px
+    border-radius: 5px
+    background: $primary-color
+    animation: pulse 2s infinite
+  
+/* Text White */
+.text-white
+    *, a,
+    .count-text,
+    .footer-newsletter-content .sub-title
+        color: white
+    li li
+        .dropdown-btn
+            span
+                color: $heading-color
+    .copyright-area
+        p
+            opacity: 0.5
+        a
+            opacity: 0.5
+            &:hover
+                opacity: 1
+
+/* Position */
+.rel
+    position: relative
+    
+@for $i from 0 through 5
+    .z-#{0 + $i}
+        z-index: 0 + $i
+    
+.overlay
+    +overlay($heading-color, 0.75)
+    
+/* Backgruond Size */
+.bgs-cover
+    background-size: cover
+    background-position: center
+    
+/* Color + Background */
+.bgc-black
+    background-color: #212121
+.bgc-yellow
+    background-color: #FFD80D
+.bgc-red,
+.bgc-primary
+    background-color: $primary-color
+.bgc-secondary
+    background-color: $secondary-color
+.bgc-lighter
+    background-color: $lighter-color
+.bgc-green
+    background-color: #3DC26E
+    
+.color-secondary
+    color: $secondary-color
+.bgc-black-with-lighting
+    background: #1e1e22
+    &:after,
+    &:before
+        position: absolute
+        +size(450px)
+        z-index: -1
+        content: ''
+        border-radius: 50%
+        background: $primary-color
+        animation: zoomInOut 5s infinite
+    &:after
+        right: -8%
+        top: -15%
+        filter: blur(110px)
+    &:before
+        left: -10%
+        top: 20%
+        filter: blur(350px)
+        animation-delay: 2.5s
+    
+/* Border Radius */
+@for $i from 1 through 6
+    .br-#{5 * $i}
+        border-radius: 5px * $i
+    
+/* Home Two */
+.home-two
+    .container
+        +res-ab(lb)
+            max-width: 1750px
+            
+/* Home Three */
+.home-three,
+.primary-two
+    --primary-color: #FF5F1B
+    --secondary-color: #6534CE
+.home-three
+    .section-title
+        h3
+            font-weight: 800
+            margin-bottom: 0
+            text-transform: capitalize
+    .product-item .image .badges span
+        border-radius: 13px
+        font-weight: 500

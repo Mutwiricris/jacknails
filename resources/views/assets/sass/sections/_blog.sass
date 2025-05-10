@@ -1,0 +1,283 @@
+/*******************************************************/
+/*********************** ## Blog ***********************/
+/*******************************************************/
+.journal-item
+    position: relative
+    margin-bottom: 30px
+    .image
+        img
+            width: 100%
+    .content
+        padding: 28px 35px
+        border: 1px solid $border-color
+        +res-bl(xs)
+            +gapLR(padding, 25px)
+        .blog-meta
+            display: flex
+            line-height: 1
+            font-size: 14px
+            font-weight: 500
+            flex-wrap: wrap
+            padding-bottom: 5px
+            align-items: center
+            text-transform: uppercase
+            li
+                margin-bottom: 10px
+                &:not(:last-child)
+                    margin-right: 5px
+                    padding-right: 5px
+                    border-right: 2px solid $border-color
+        h6
+            line-height: 1.6
+            font-weight: 600
+            margin-bottom: 15px
+            text-transform: uppercase
+            +res-ab(xs)
+                font-size: 18px
+    &.style-two
+        .content
+            padding: 33px
+    &.style-three
+        .image
+            position: relative
+            &:before
+                position: absolute
+                content: ''
+                z-index: 1
+                +size(100%)
+                left: 0
+                top: 0
+                background: linear-gradient(2.48deg, rgba(0, 0, 0, 0.5) 39.72%, rgba(0, 0, 0, 0) 43.79%)
+        .content
+            position: absolute
+            width: 100%
+            bottom: 0
+            left: 0
+            z-index: 2
+            border: none
+            *
+                color: white
+            .read-more:before
+                background: white
+            .blog-meta li
+                border-color: white
+            h6 a:hover,
+            .read-more:hover,
+            .blog-meta li a:hover
+                color: $primary-color
+                
+/* Blog Standard */
+.blog-standart-item,
+.blog-details-content
+    .image
+        img
+            width: 100%
+    .content
+        .blog-meta
+            top: -25px
+            font-size: 14px
+            font-weight: 500
+            background: white
+            margin-left: 25px
+            position: relative
+            margin-right: 14px
+            margin-bottom: -5px
+            padding-right: 20px
+            display: inline-flex
+            text-transform: uppercase
+            box-shadow: 0px 4px 10px rgba(129, 134, 159, 0.12)
+            +res-bl(xs)
+                margin-left: 14px
+            .tag
+                color: white
+                padding: 12px 22px
+                margin-right: 20px
+                background: $primary-color
+            a
+                display: inline-block
+            span
+                align-self: center
+        h2
+            margin-bottom: 20px
+            text-transform: uppercase
+            +res-bl(md)
+                font-size: 35px
+            +res-bl(sm)
+                font-size: 30px
+            +res-bl(xs)
+                font-size: 25px
+            
+.blog-standart-item
+    margin-bottom: 50px
+    .content
+        p
+            margin-bottom: 28px
+        .blog-btn
+            font-size: 14px
+            font-weight: 500
+            padding: 11px 22px
+            display: inline-block
+            text-transform: uppercase
+            border: 1px solid $border-color
+            
+.blog-video
+    position: relative
+    .video-play
+        +abs-middle()
+            
+/* Blog Grid */
+.blog-grid-item
+    text-align: center
+    margin-bottom: 45px
+    .image
+        img
+            width: 100%
+    .content
+        +container(360px)
+        .blog-meta
+            top: -25px
+            font-size: 14px
+            font-weight: 500
+            background: white
+            flex-wrap: wrap
+            position: relative
+            padding: 12px 20px
+            align-items: center
+            display: inline-flex
+            justify-content: center
+            text-transform: uppercase
+            box-shadow: 0px 4px 10px rgba(129, 134, 159, 0.12)
+            li
+                a
+                    &:not(:hover)
+                        color: $heading-color
+                &:not(:last-child)
+                    &:after
+                        content: '|'
+                        +gapLR(margin, 3px)
+        h5
+            margin-bottom: 15px
+            +res-bl(xs)
+                font-size: 18px
+        p
+            margin-bottom: 15px
+        .blog-btn
+            font-size: 14px
+            font-weight: 600
+            display: inline-block
+            text-transform: uppercase
+            &:hover
+                text-decoration: underline
+            &:not(:hover)
+                color: #1B1C29
+            
+/* Blog Details */
+.blog-details-content
+    .content
+        .blog-meta
+            margin-bottom: 5px
+        p
+            a
+                color: $primary-color
+                &:not(:hover)
+                    text-decoration: underline
+        p, h4, .image, blockquote
+            margin-bottom: 25px
+        blockquote
+            position: relative
+            padding-left: 80px
+            h6
+                font-weight: 700
+                line-height: 1.65
+                +res-ab(ms)
+                    font-size: 18px
+            .blockquote-footer
+                font-size: 14px
+                font-weight: 500
+                text-transform: uppercase
+            &:before
+                left: 0
+                top: 15px
+                font-weight: 300
+                content: '\f10d'
+                font-size: 55px
+                position: absolute
+                color: $primary-color
+                font-family: 'Font Awesome 5 Pro'
+            +res-bl(sm)
+                padding-left: 50px
+                &:before
+                    font-size: 35px
+                
+.tag-share
+    flex-wrap: wrap
+    +flexcenter(space-between)
+    border-top: 1px solid $border-color
+    border-bottom: 1px solid $border-color
+    .tags
+        display: flex
+        h6
+            margin-bottom: 0
+        a
+            margin-left: 5px
+            &:not(:last-child)
+                &:after
+                    content: ','
+    .share-icon
+        a
+            font-size: 16px
+            &:not(:last-child)
+                margin-right: 15px
+            
+/* Comments */
+.comment-body
+    margin-bottom: 80px
+    +res-ab(md)
+        display: flex
+        align-items: center
+    .author-thumb
+        flex: none
+        max-width: 120px
+        margin-right: 30px
+        +res-bl(md)
+            margin-bottom: 20px
+        img
+            border-radius: 5px
+    .content
+        .comment-header
+            margin-bottom: 10px
+            +flexcenter(space-between)
+            h6
+                font-weight: 700
+                margin-bottom: 5px
+                +res-ab(xs)
+                    font-size: 18px
+            .date,
+            .rool,
+            .reply
+                font-size: 14px
+                font-weight: 500
+                text-transform: uppercase
+        p
+            margin-bottom: 0
+    &.child-comment
+        margin-left: 110px
+        +res-bl(ms)
+            margin-left: 30px
+        
+.author-comment
+    .comment-body
+        background: $lighter-color
+        .author-thumb
+            margin: 0
+            max-width: 180px
+            +res-bl(md)
+                max-width: none
+                padding: 30px 30px 0
+            img
+                border-radius: 0
+        .content
+            padding: 30px
+            .rool
+                margin-bottom: 5px
+                display: inline-block

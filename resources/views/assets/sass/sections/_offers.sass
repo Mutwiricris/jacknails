@@ -1,0 +1,340 @@
+/*******************************************************/
+/********************** ## Offers **********************/
+/*******************************************************/
+.sale-offer-left
+    transform: rotate(-5.24deg)
+.sale-offer-right
+    transform: rotate(5.24deg)
+.sale-offer-left,
+.sale-offer-right
+    transition: 0.5s
+    background: white
+    @extend %box-shadow
+    padding: 20px 20px 40px
+    img
+        width: 100%
+    &:hover
+        transform: rotate(0)
+    
+.sale-text
+    display: flex
+    line-height: 1
+    font-size: 100px
+    font-weight: 500
+    text-align: right
+    color: transparent
+    padding-right: 35px
+    letter-spacing: 5px
+    flex-direction: column
+    -webkit-text-stroke: 1px
+    text-transform: uppercase
+    -webkit-text-stroke-color: black
+    +res-bl(xl)
+        font-size: 70px
+    +res-bl(sm)
+        font-size: 55px
+        padding-right: 0
+    +res-bl(xs)
+        text-align: center
+        margin-bottom: 25px
+    
+.sale-offer-details
+    padding-left: 38px
+    margin-left: -18px
+    text-transform: uppercase
+    border-left: 2px solid $border-color
+    +res-bl(sm)
+        padding-left: 18px
+    +res-bl(xs)
+        text-align: center
+    h4
+        font-size: 30px
+        margin-bottom: 0
+    .percent-text
+        align-items: center
+        display: inline-flex
+        margin-bottom: 15px
+        .percentage
+            font-size: 120px
+            font-weight: 700
+            line-height: 1.05
+            color: $primary-color
+            font-family: $heading-font
+            +res-bl(xxl)
+                font-size: 110px
+            +res-bl(xl)
+                font-size: 70px
+            +res-bl(ms)
+                font-size: 55px
+        .after
+            width: 15px
+            font-size: 30px
+            margin-left: 5px
+            font-weight: 800
+            line-height: 0.95
+            word-break: break-all
+            color: $heading-color
+            font-family: $heading-font
+            +res-bl(xl)
+                font-size: 20px
+    h5
+        margin-bottom: 30px
+        span
+            color: $base-color
+            
+            
+/* Popular Product Offer */
+.popular-product-offer
+    padding: 50px
+    margin-bottom: 30px
+    background-size: cover
+    height: calc(50% - 30px)
+    background-position: center center
+    +res-bl(lg)
+        padding-bottom: 30%
+    +res-bl(ms)
+        padding: 50px 25px 30%
+    .content
+        max-width: 280px
+        .sub-title
+            font-weight: 600
+            margin-bottom: 5px
+            color: $heading-color
+            display: inline-block
+            text-transform: uppercase
+        h3
+            margin-bottom: 20px
+            letter-spacing: -2px
+            text-transform: uppercase
+            +res-bl(ms)
+                font-size: 30px
+        &.ms-auto
+            max-width: 190px
+    &.style-two
+        padding: 80px
+        border-radius: 5px
+        margin-bottom: 30px
+        height: calc(100% - 30px)
+        +res-bl(md)
+            +gapLR(padding, 35px)
+        .content.text-white
+            .sub-title
+                color: white
+                font-weight: 500
+                margin-bottom: 15px
+                &.yellow
+                    color: #FED604
+            .price
+                display: flex
+                font-size: 20px
+                font-weight: 500
+                align-items: center
+                margin-bottom: 25px
+                .h4
+                    color: white
+                    font-size: 30px
+                    margin-bottom: 0
+                    margin-left: 10px
+            
+/* Popular Product Offer Three */
+.popular-product-offer-three
+    padding: 55px 60px 50px
+    margin-bottom: 30px
+    border-radius: 5px
+    background-size: cover
+    height: calc(100% - 30px)
+    background-position: center center
+    +res-bl(ms)
+        +gapLR(padding, 25px)
+    .content
+        .sub-title
+            color: white
+            font-size: 20px
+            font-weight: 500
+            margin-bottom: 12px
+            display: inline-block
+            text-transform: uppercase
+            &.yellow
+                color: #FED604
+        h3
+            margin-bottom: 22px
+            text-transform: uppercase
+            +res-bl(sm)
+                font-size: 30px
+        h4
+            font-weight: 300
+            text-transform: uppercase
+            
+.new-and-charger-area
+    +overlay($lighter-color, 1)
+    &:before
+        height: 125px
+
+/* CountDown Offer */
+.count-down
+    display: flex
+    flex-wrap: wrap
+    +gapLR(margin, -5px)
+    li
+        margin: 5px
+        padding: 10px
+        font-size: 12px
+        min-width: 53px
+        font-weight: 500
+        line-height: 1.5
+        border-radius: 3px
+        +flexcenter(center)
+        flex-direction: column
+        text-transform: uppercase
+        background: $lighter-color
+        span
+            font-size: 18px
+            color: $heading-color
+            
+.countdown-offer-inner
+    +res-bt(xl, xxl)
+        +gapLR(padding, 50px)
+    +res-bl(sm)
+        +gapLR(padding, 50px)
+    +res-bl(ms)
+        +gapLR(padding, 25px)
+    .count-down
+        justify-content: center
+        li
+            color: white
+            padding: 16px
+            line-height: 1.1
+            font-size: 14px
+            min-width: 80px
+            background: $primary-color
+            span
+                color: white
+                font-size: 30px
+                margin-bottom: 5px
+        
+/* CTA Offer */
+.cta-offer
+    margin-top: 60px
+    padding-bottom: 150px
+    height: calc(100% - 90px)
+    background-position: top center
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+        
+/* CTA Offer two */
+.cta-offer-two
+    text-align: center
+    padding: 40px 25px 230px
+    .section-title
+        .sub-title
+            font-size: 16px
+        h3
+            +res-ab(xs)
+                font-size: 30px
+    .starting-from
+        font-size: 16px
+        font-weight: 500
+        color: $heading-color
+        span
+            color: white
+            font-size: 20px
+            margin-left: 10px
+            font-weight: 700
+            padding: 5px 15px
+            border-radius: 5px
+            background: $primary-color
+        
+/* Slider Offer */
+.slider-offer-part
+    border-radius: 5px
+    margin-bottom: 30px
+    padding: 40px 40px 30px
+    height: calc(100% - 30px)
+    +res-bl(ms)
+        +gapLR(padding, 25px)
+    .content
+        h3, .h4, h5
+            font-weight: 500
+        h3
+            font-size: 30px
+            margin-top: 5px
+            +res-bl(xs)
+                font-size: 25px
+    .image
+        position: relative
+        .offer-text
+            position: absolute
+            left: 0
+            top: 20px
+            color: white
+            +size(100px)
+            padding: 10px
+            font-size: 24px
+            font-weight: 700
+            line-height: 1.2
+            text-align: center
+            border-radius: 50%
+            +flexcenter(center)
+            background: $primary-color
+            font-family: $heading-font
+            
+/* Offer Style Two */
+.offer-style-two
+    display: flex
+    border-radius: 5px
+    padding: 85px 40px
+    align-items: center
+    margin-bottom: 30px
+    background-size: cover
+    height: calc(100% - 30px)
+    background-position: center
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    .content
+        max-width: 160px
+        .sub-title
+            font-weight: 500
+            margin-bottom: 8px
+            display: inline-block
+            text-transform: uppercase
+        h2
+            margin-bottom: 10px
+            text-transform: uppercase
+            +res-ab(md)
+                font-size: 45px
+            +res-bl(ms)
+                font-size: 35px
+        h3
+            margin-bottom: 10px
+            text-transform: uppercase
+            +res-bl(ms)
+                font-size: 30px
+        h5, .h5
+            color: white
+            font-weight: 500
+            margin-bottom: 11px
+            display: inline-block
+            text-transform: uppercase
+        h4
+            font-weight: 500
+            margin-bottom: 15px
+            +res-bl(ms)
+                font-size: 20px
+        .theme-btn
+            margin-top: 12px
+    &.big-item
+        position: relative
+        +res-ab(ms)
+            +gapLR(padding, 60px)
+        .content
+            max-width: 385px
+        .badge
+            padding: 0
+            margin-top: auto
+            margin-bottom: -30px
+            +res-bl(md)
+                position: absolute
+                bottom: 50px
+                right: 30px
+                max-width: 25%
+    

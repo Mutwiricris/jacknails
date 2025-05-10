@@ -1,0 +1,398 @@
+/*******************************************************/
+/***************** ## Product Details ******************/
+/*******************************************************/
+/* Preview Images */
+.preview-images-wrap
+    position: relative
+    background: $lighter-color
+    .preview-image-item
+        .image
+            position: relative
+            padding-bottom: 125%
+            img
+                +abs-middle()
+                max-width: 80%
+                max-height: 80%
+    .badges
+        position: absolute
+        top: 20px
+        left: 20px
+        z-index: 2
+        display: flex
+        flex-direction: column
+        span
+            color: white
+            font-size: 13px
+            font-weight: 600
+            line-height: 1.5
+            padding: 3px 10px
+            border-radius: 3px
+            margin-bottom: 5px
+            text-transform: uppercase
+    .add-wishlist
+        position: absolute
+        right: 20px
+        top: 20px
+        z-index: 2
+        font-size: 20px
+        +circle(white, 50px)
+        &:hover
+            color: white
+            background: $primary-color
+    &.style-two
+        +res-ab(xl)
+            margin-right: -65px
+            
+.preview-images
+    background: $lighter-color
+    .preview-image-item
+        .image
+            position: relative
+            padding-bottom: 100%
+            img
+                +abs-middle()
+                
+/* Thumb Images */
+.thumb-images
+    +gapLR(margin, -10px)
+    .thumb-image-item
+        +gapLR(margin, 10px)
+        .image
+            position: relative
+            padding-bottom: 100%
+            background: $lighter-color
+            img
+                +abs-middle()
+    .slick-arrow
+        position: absolute
+        left: 25px
+        top: 50%
+        z-index: 2
+        font-size: 18px
+        transition: 0.5s
+        background: transparent
+        transform: translateY(-50%)
+        &.product-thumb-next
+            left: auto
+            right: 25px
+        &:focus,
+        &:hover
+            color: $primary-color
+        
+/* Thumb Images Two */
+.thumb-images-two
+    height: calc(100% - 10px)
+    +res-ab(xl)
+        margin-left: 65px
+    +res-bl(md)
+        +gapLR(margin, -10px)
+    .thumb-item
+        flex: 1 1 auto
+        position: relative
+        margin-bottom: 20px
+        background: $lighter-color
+        +res-bl(md)
+            padding-bottom: 25%
+            +gapLR(margin, 10px)
+        img
+            +abs-middle()
+            max-width: 60%
+            max-height: 60%
+        
+/* Product Details content */
+.product-details-content
+    .in-stock
+        color: white
+        font-size: 14px
+        padding: 0 10px
+        font-weight: 500
+        border-radius: 3px
+        background: #0CC281
+        margin-bottom: 10px
+        display: inline-block
+    b
+        font-weight: 500
+        margin-bottom: 10px
+        display: inline-block
+        color: $heading-color
+    h5
+        font-size: 18px
+        margin-bottom: 13px
+    .price-vat
+        display: flex
+        align-items: center
+        .price
+            font-size: 20px
+            font-weight: 700
+            margin-right: 10px
+            color: $primary-color
+            font-family: $heading-font
+        .vat-text
+            font-size: 14px
+        del
+            color: #AAAAAA
+            font-size: 20px
+    .radio-item
+        position: relative
+        display: inline-block
+        margin: 0 10px 10px 0
+        input
+            position: absolute
+            z-index: -1
+            &:checked
+                ~ label
+                    border-color: $primary-color
+        label
+            padding: 10px
+            margin-bottom: 0
+            transition: 0.5s
+            background: white
+            +flexcenter(center)
+            border: 1px solid $border-color
+    .custom-products-color
+        display: flex
+        flex-wrap: wrap
+        .radio-item
+            label
+                +size(70px, 74px)
+    .custom-products-size
+        display: flex
+        flex-wrap: wrap
+        .radio-item
+            label
+                +size(50px)
+    .realtime
+        span
+            color: white
+            padding: 3px 8px
+            +gapLR(margin, 5px)
+            border-radius: 3px
+            background: $primary-color
+    .theme-btn
+        border-radius: 3px
+    .quantity-btn
+        display: flex
+        padding-bottom: 10px
+        .quantity-input
+            border-radius: 3px
+            margin-right: 10px
+            margin-bottom: 10px
+        .theme-btn
+            width: 100%
+            margin-bottom: 10px
+        &.style-two
+            flex-wrap: wrap
+            .quantity-input
+                max-width: 120px
+            .theme-btn
+                width: auto
+                margin-right: 10px
+            .btns
+                display: flex
+                button
+                    +size(54px)
+                    font-size: 18px
+                    line-height: 54px
+                    border-radius: 3px
+                    text-align: center
+                    background: $lighter-color
+                    &:not(:last-child)
+                        margin-right: 10px
+    .compare-shipping-question
+        display: flex
+        align-items: center
+        li
+            display: flex
+            margin-right: 15px
+            align-items: center
+            &:last-child
+                margin-left: auto
+            i
+                margin-right: 5px
+                color: $primary-color
+    .sku-category-tags
+        li
+            margin-bottom: 10px
+            b
+                margin-bottom: 0
+            a:not(:last-child):after
+                content: ','
+        &.inline
+            display: flex
+            flex-wrap: wrap
+            li
+                margin-right: 10px
+    .social-share
+        display: flex
+        flex-wrap: wrap
+        margin: 0 -5px -5px 0
+        a
+            color: white
+            padding: 10px
+            flex: 1 1 auto
+            font-size: 14px
+            line-height: 1.44
+            border-radius: 3px
+            margin: 0 5px 5px 0
+            background: $primary-color
+            &.facebook
+                background: #3B5998
+            &.twitter
+                background: #139AF0
+            &.instagram
+                background: #E70C88
+            
+.quantity-input
+    display: flex
+    max-width: 140px
+    padding: 10px 15px
+    align-items: center
+    border: 1px solid $border-color
+    input
+        border: none
+        font-size: 18px
+        font-weight: 500
+        padding: 4px 15px
+        text-align: center
+    button
+        font-size: 25px
+        background: transparent
+        
+/* Product Preview Three */
+.thumbnail-and-preview
+    +res-ab(sm)
+        display: flex
+    .thumb-images-three
+        +res-ab(sm)
+            width: 20%
+        +res-bl(sm)
+            flex-wrap: nowrap
+            margin-right: -10px
+        .thumb-item
+            height: 110px
+            padding: 10px
+            margin-right: 10px
+            +flexcenter(center)
+            margin-bottom: 10px
+            background: $lighter-color
+            +res-bl(sm)
+                height: auto
+                flex: 1 1 auto
+    .preview-images-wrap.style-three
+        +res-ab(sm)
+            width: calc(100% - 110px)
+        .preview-image-item
+            .image
+                padding-bottom: 130%
+        
+/* Product Details Info */
+.product-details-info
+    .info-item.style-two
+        min-width: auto
+        padding: 30px 25px
+        margin-bottom: 20px
+        +res-bl(xs)
+            +gapLR(padding, 20px)
+        .icon
+            font-size: 35px
+            margin-top: 5px
+            margin-right: 15px
+            color: $primary-color
+            
+/* Product Details Info Two */
+.product-details-info-two
+    padding: 30px
+    background: $lighter-color
+    .info-item
+        min-width: auto
+        margin-bottom: 0
+        &:not(:last-child)
+            margin-bottom: 20px
+            padding-bottom: 20px
+            border-bottom: 1px solid #E3E3E3
+        .content
+            h6
+                text-transform: capitalize
+            p
+                font-size: 15px
+        .icon
+            font-size: 35px
+            margin-top: 5px
+            margin-right: 15px
+            color: $primary-color
+            
+/* Product Description Tab */
+.product-description-tab
+    border: 1px solid $border-color
+    .nav
+        flex: none
+        margin: -1px
+        .nav-link
+            @extend %heading
+            font-weight: 600
+            padding: 17px 33px
+            background: transparent
+            border-right: 1px solid $border-color
+            border-bottom: 1px solid $border-color
+            +res-bl(md)
+                padding: 10px 20px
+            &.active
+                color: white
+                background: $primary-color
+                border-color: $primary-color
+    .tab-content
+        padding: 30px
+        +res-bl(sm)
+            +gapLR(padding, 20px)
+        .tab-pane
+            p
+                &:not(:last-child)
+                    margin-bottom: 20px
+                &:last-child
+                    margin-bottom: 0
+                
+/* Product Description Tab Two */
+.product-des-two-tab
+    .tab-content
+        p, h1, h2, h3, h4, h5, h6
+            margin-bottom: 20px
+        
+/* Product Details Bottom */
+.product-detail-bottom
+    .content
+        h4
+            margin-bottom: 25px
+        p
+            &:not(:last-child)
+                margin-bottom: 25px
+            
+/* Related Product Slider */
+.related-product-slider
+    +gapLR(margin, -15px)
+    +res-bl(sm)
+        +container(350px)
+    .product-item
+        +gapLR(margin, 15px)
+        +res-bl(sm)
+            max-width: none
+            +gapLR(margin, 0)
+            
+/* Related Product Two Slider */
+.related-product-two-slider
+    +res-bl(sm)
+        max-width: 350px
+    .slick-track
+        display: flex
+    .slick-list
+        padding-right: 2px
+        margin-right: -2px
+        padding-bottom: 1px
+    .product-item-two
+        margin: 0 -1px -1px 0
+        height: auto
+        max-width: none
+        
+.recommended-item-area
+    .product-item-two
+        margin: 0 -1px -1px 0
+        height: calc(100% + 1px)

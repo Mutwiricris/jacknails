@@ -1,0 +1,167 @@
+/*******************************************************/
+/******************* ## Contact Info *******************/
+/*******************************************************/
+.info-wrap
+    padding: 75px 50px 44px
+    border: 1px dashed $border-color
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    
+.info-item
+    display: flex
+    margin-bottom: 30px
+    .icon
+        line-height: 1
+        font-size: 50px
+        margin-right: 20px
+        color: $heading-color
+    .content
+        h6
+            font-size: 18px
+            text-transform: uppercase
+        p
+            font-size: 16px
+            line-height: 27px
+            margin-bottom: 0
+    &.style-two
+        min-width: 300px
+        padding: 22px 30px
+        border-radius: 3px
+        background: $lighter-color
+        +res-bl(xs)
+            min-width: auto
+            +gapLR(padding, 15px)
+        .content
+            h6
+                text-transform: capitalize
+        &.color-two
+            background: #FFF3EE
+            .icon
+                color: #6534CE
+    &.style-three
+        margin-top: 30px
+        margin-bottom: 0
+        flex-direction: column
+        .icon
+            margin-bottom: 5px
+            color: $primary-color
+        h5
+            margin-bottom: 10px
+    &.style-four
+        margin-bottom: 45px
+        +res-bl(xs)
+            flex-direction: column
+        .icon
+            +size(70px)
+            flex: none
+            font-size: 45px
+            line-height: 70px
+            border-radius: 5px
+            text-align: center
+            margin-bottom: 15px
+            color: $primary-color
+            background: $lighter-color
+        h6
+            font-weight: 700
+            margin-bottom: 10px
+
+/* Login Form */
+.login-image
+    img
+        width: 100%
+.login-form
+    +res-bl(sm)
+        +gapLR(padding, 25px)
+    .title
+        text-transform: uppercase
+    .social-medias
+        display: flex
+        flex-wrap: wrap
+        margin-right: -10px
+        a
+            flex: 1 1
+            color: white
+            font-weight: 500
+            border-radius: 3px
+            padding: 12px 20px
+            margin-right: 10px
+            +flexcenter(center)
+            margin-bottom: 10px
+            background: $primary-color
+            text-transform: capitalize
+            i
+                margin-right: 8px
+            &.facebook
+                background: #3B5998
+            &.twitter
+                background: #139AF0
+    .form-group
+        margin-bottom: 15px
+        label
+            margin-bottom: 7px
+        input
+            border-radius: 0
+            padding: 15px 20px
+            background: transparent
+    b
+        font-weight: 500
+    .theme-btn
+        border-radius: 0
+    .have-account
+        a
+            color: $primary-color
+            
+/* Contact Page */
+.contact-info-inner
+    padding: 38px 50px
+    background: $lighter-color
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    li
+        display: flex
+        font-size: 18px
+        font-weight: 500
+        line-height: 1.62
+        color: $heading-color
+        i
+            margin-top: 5px
+            margin-right: 15px
+            color: $primary-color
+        a
+            &:not(:hover)
+                color: $heading-color
+        &:not(:last-child)
+            margin-bottom: 35px
+.live-chat-btn
+    font-size: 14px
+    padding: 16px 25px
+    +flexcenter(center)
+    text-transform: uppercase
+    border: 1px solid $border-color
+    i
+        font-size: 20px
+        margin-right: 10px
+        color: $primary-color
+        
+.comment-form,
+.contact-page-form
+    .form-group
+        margin-bottom: 25px
+    label
+        font-weight: 400
+    input[type=checkbox]
+        margin-top: 7px
+        margin-right: 10px
+    .theme-btn
+        border-radius: 0
+        padding: 18px 44px
+        
+.location-map
+    iframe
+        height: 600px
+        +res-bl(xxl)
+            height: 500px
+        +res-bl(lg)
+            height: 400px
+        +res-bl(sm)
+            height: 350px

@@ -1,0 +1,230 @@
+/*******************************************************/
+/******************* ## Main Footer *******************/
+/*******************************************************/
+/* Footer Top */
+.footer-top-newsletter
+    flex-wrap: wrap
+    border-radius: 5px
+    padding: 45px 60px 20px
+    +flexcenter(space-between)
+    transform: translateY(-75px)
+    +res-bl(md)
+        +gapLR(padding, 35px)
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    .newsletter-text
+        margin-bottom: 25px
+        +res-ab(lg)
+            margin-right: 15px
+        p
+            margin-bottom: 10px
+        h4
+            margin-bottom: 0
+            text-transform: uppercase
+    form
+        display: flex
+        min-width: 50%
+        margin-bottom: 15px
+        +res-bl(ms)
+            flex-wrap: wrap
+        .form-group
+            width: 100%
+            margin-bottom: 10px
+            position: relative
+            +res-ab(ms)
+                margin-right: 10px
+            label
+                position: absolute
+                top: 18px
+                right: 25px
+                color: $primary-color
+        .theme-btn
+            flex: none
+            margin-bottom: 10px
+            &:hover
+                background: $heading-color
+
+/* Footer Widgets */
+.footer-widget
+    margin-bottom: 40px
+.footer-title
+    margin-bottom: 25px
+    text-transform: uppercase
+    +res-ab(xs)
+        font-size: 18px
+        
+.widget_newsletter
+    p
+        font-size: 18px
+    form
+        display: flex
+        padding: 5px
+        border-radius: 3px
+        align-items: center
+        border: 1px solid #404040
+        input
+            border: none
+            background: transparent
+            padding: 10px 0 10px 20px
+            
+.widget_contact_info
+    max-width: 180px
+    ul
+        li
+            display: flex
+            align-items: center
+            word-break: break-all
+            &:not(:last-child)
+                margin-bottom: 30px
+            i
+                flex: none
+                font-size: 25px
+                margin-right: 10px
+                color: $primary-color
+            
+/* Footer Middle */
+.footer-middle-inner
+    +res-ab(md)
+        display: flex
+        align-items: center
+    .footer-middle-newsletter
+        z-index: 1
+        position: relative
+        padding: 15px 15px 5px 0
+        +res-ab(lg)
+            display: flex
+            align-items: center
+        +res-ab(md)
+            width: 70%
+            margin-right: 5%
+        &:after
+            content: ''
+            +size(100vw, 100%)
+            border-radius: 5px
+            position: absolute
+            right: 0
+            top: 0
+            z-index: -1
+            background: $primary-color
+        h5
+            flex: none
+            color: white
+            margin-right: 30px
+            margin-bottom: 15px
+        form
+            width: 100%
+            display: flex
+            +res-bl(ms)
+                flex-wrap: wrap
+            .form-group
+                width: 100%
+                margin-bottom: 10px
+                position: relative
+                +res-ab(ms)
+                    margin-right: 10px
+                label
+                    position: absolute
+                    top: 12px
+                    right: 20px
+                    color: $primary-color
+                input
+                    padding: 12px 20px
+            .theme-btn
+                flex: none
+                margin-bottom: 10px
+                &:hover
+                    background: $secondary-color
+    .payment-method
+        +res-ab(md)
+            width: 25%
+        h6
+            margin-bottom: 15px
+            text-transform: uppercase
+    
+/* Footer Bottom */
+.footer-bottom-inner
+    flex-wrap: wrap
+    +flexcenter(space-between)
+    .copyright-text
+        p
+            margin-bottom: 0
+            a
+                font-weight: 500
+                color: $primary-color
+    .copyright-menu
+        display: flex
+        line-height: 1
+        align-items: center
+        li
+            &:not(:last-child)
+                margin-right: 6px
+                padding-right: 6px
+                border-right: 1px solid #B3B3B3
+    
+/* Footer Black */
+.main-footer.text-white
+    p, a, li
+        color: #B3B3B3
+    a
+        i
+            transition: 0.5s
+        &:hover
+            color: $primary-color
+            i
+                color: $primary-color
+    .footer-bottom
+        background: #131313
+        
+/* Footer One */
+.footer-one
+    .widget_about
+        text-align: center
+        +res-ab(lg)
+            margin-top: -50px
+
+    .widget_newsletter
+        text-align: center
+        
+/* Footer Two */
+.footer-two
+    .widget_about
+        max-width: 375px
+        .social-style-one
+            a
+                &:hover
+                    color: white
+                    background: $primary-color
+                    i
+                        color: white
+    .footer-bottom
+        border-top: 1px solid $border-color
+        
+/* Footer Three */
+.footer-three
+    .widget_about
+        h6
+            &:not(.footer-title)
+                margin-top: 20px
+                margin-bottom: 15px
+                text-transform: uppercase
+        .apps
+            display: flex
+            a
+                &:not(:last-child)
+                    margin-right: 13px
+    .widget_contact_info ul li i
+        color: $base-color
+        
+.footer-shapes
+    .shape
+        z-index: -1
+        max-width: 20%
+        position: absolute
+        &.one
+            left: 0
+            top: 40%
+            animation: leftRightOne 20s infinite
+        &.two
+            right: 0
+            bottom: 20%
+            animation: down-up-one 10s infinite

@@ -1,0 +1,29 @@
+/*******************************************************/
+/******************** ## Instagram *********************/
+/*******************************************************/
+.instagram-item
+    margin-bottom: 30px
+    +overlay($heading-color, 0)
+    img
+        width: 100%
+    &:before
+        z-index: 2
+        transition: 0.5s
+    .instagram-btn
+        opacity: 0
+        font-size: 20px
+        background: white
+        padding: 15px 30px
+        align-items: center
+        border-radius: 30px
+        display: inline-flex
+        +abs-middle()
+        z-index: 3
+        i
+            margin-right: 8px
+            color: $primary-color
+    &:hover
+        .instagram-btn
+            opacity: 1
+        &:before
+            opacity: 0.2

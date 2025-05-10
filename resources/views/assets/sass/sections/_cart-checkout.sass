@@ -1,0 +1,188 @@
+/*******************************************************/
+/******************* ## Cart Checkout ******************/
+/*******************************************************/
+.cart-table
+    table
+        width: 100%
+        border: 1px solid $border-color
+        thead
+            +res-bl(md)
+                display: none
+        tr
+            border-bottom: 1px solid $border-color
+            th
+                font-weight: 700
+                padding: 20px 30px
+                color: $heading-color
+                font-family: $heading-font
+                &:last-child
+                    text-align: right
+            td
+                padding: 30px
+                &:last-child
+                    text-align: right
+                    +res-bl(md)
+                        padding-top: 0
+                        text-align: center
+                    .price
+                        font-size: 18px
+                        font-weight: 500
+                        margin-right: 5px
+                        color: $heading-color
+                    button
+                        color: #888888
+                        background: transparent
+                .image
+                    padding: 5px
+                    height: 120px
+                    +flexcenter(center)
+                    background: $lighter-color
+                b
+                    font-weight: 500
+                    color: $heading-color
+                .quantity-input
+                    margin: auto
+                    +res-ab(md)
+                        padding: 10px
+                        max-width: 80px
+                        flex-direction: column-reverse
+                        input
+                            padding: 10px 5px
+        tbody
+            tr
+                &:last-child
+                    border-bottom: none
+                +res-bl(md)
+                    display: grid
+                td
+                    +res-ab(md)
+                        &:nth-child(1)
+                            padding-right: 0
+                        &:nth-child(3)
+                            padding-left: 0
+                    +res-bl(md)
+                        &:nth-child(2)
+                            +gapTB(padding, 0)
+                            text-align: center
+                    
+.update-shopping
+    .theme-btn
+        border-radius: 0
+        &:not(:last-child)
+            margin-right: 7px
+        
+.cart-total,
+.order-summery
+    padding: 30px
+    border: 1px solid $border-color
+    .title
+        margin-bottom: 35px
+        padding-bottom: 12px
+        text-transform: capitalize
+        border-bottom: 1px solid $border-color
+    table
+        width: 100%
+        margin-bottom: 30px
+        tr
+            td
+                font-size: 16px
+                padding-bottom: 22px
+                &:first-child
+                    font-weight: 500
+                    color: $heading-color
+                &:last-child
+                    text-align: right
+                strong
+                    font-size: 18px
+                    font-weight: 500
+                .price
+                    font-size: 20px
+                    font-weight: 500
+                    color: $primary-color
+            &:last-child
+                border-top: 1px solid $border-color
+                border-bottom: 1px solid $border-color
+                td
+                    padding-top: 25px
+                    padding-bottom: 8px
+    .form-group
+        input
+            margin-right: 5px
+        label
+            font-weight: 400
+    .theme-btn
+        border-radius: 3px
+        
+.cart-note,
+.order-summery,
+.billing-address,
+.shipping-calculate
+    .form-group
+        +clearfix()
+        margin-bottom: 20px
+        input,
+        textarea,
+        .nice-select
+            font-size: 15px
+            border-radius: 0
+            line-height: 1.6
+            padding: 15px 20px
+        .nice-select
+            &:after
+                border-width: 1px
+        &.coupon
+            display: flex
+            input
+                margin-right: 10px
+            .theme-btn
+                flex: none
+    label
+        margin-bottom: 10px
+        text-transform: capitalize
+    .title
+        font-weight: 700
+        margin-bottom: 15px
+        +res-ab(xs)
+            font-size: 18px
+    .theme-btn
+        border-radius: 0
+        
+.billing-address
+    .click-for-login
+        font-weight: 500
+        padding: 22px 30px
+        background: $lighter-color
+        i
+            margin-right: 5px
+        a
+            color: $primary-color
+        
+.order-summery
+    +res-bl(xs)
+        +gapLR(padding, 20px)
+    table tr:last-child td
+        padding-bottom: 25px
+    
+.order-summery-item
+    display: flex
+    align-items: center
+    margin-bottom: 25px
+    padding-bottom: 10px
+    border-bottom: 1px solid $border-color
+    .image
+        +size(100px)
+        padding: 15px
+        margin-right: 25px
+        margin-bottom: 15px
+        +flexcenter(center)
+        background: $lighter-color
+        +res-bl(xs)
+            +size(80px)
+            margin-right: 10px
+    h6
+        margin-right: auto
+        margin-bottom: 15px
+    .price
+        margin-left: 15px
+        margin-bottom: 15px
+        

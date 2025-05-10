@@ -1,0 +1,126 @@
+/*******************************************************/
+/******************* ## Testimonials *******************/
+/*******************************************************/
+.testimonial-item
+    background: white
+    padding: 40px 50px
+    text-align: center
+    border-radius: 5px
+    margin-bottom: 30px
+    +res-bl(ms)
+        +gapLR(padding, 25px)
+    .author
+        max-width: 90px
+        margin-bottom: 10px
+        display: inline-block
+        img
+            border-radius: 50%
+    .ratting
+        margin-bottom: 13px
+        i
+            font-size: 13px
+    h5
+        margin-top: 20px
+        margin-bottom: 5px
+        
+.testimonials-active
+    +gapLR(margin, -15px)
+    .testimonial-item
+        +gapLR(margin, 15px)
+    .slick-dots
+        margin-top: 5px
+        li
+            +size(12px)
+            &.slick-active
+                width: 40px
+                border-radius: 6px
+                
+.video-section-area
+    +overlay($lighter-color, 1)
+    &:before
+        height: 40%
+    
+/* Feedback */
+.feedback-active
+    +gapLR(margin, -15px)
+    .feedback-item
+        display: flex
+        +gapLR(margin, 15px)
+    .slick-arrow
+        top: 40%
+        z-index: 1
+        transition: 0.5s
+        font-size: 55px
+        position: absolute
+        background: transparent
+        +res-bl(ms)
+            font-size: 35px
+        &:focus,
+        &:hover
+            color: $primary-color
+        &.feedback-prev
+            right: calc(100% + 25px)
+            +res-bl(lb)
+                right: calc(100% - 45px)
+        &.feedback-next
+            left: calc(100% + 25px)
+            +res-bl(lb)
+                left: calc(100% - 45px)
+        
+.feedback-item
+    z-index: 1
+    display: flex
+    background: white
+    position: relative
+    align-items: center
+    margin-top: 35px
+    margin-bottom: 70px
+    padding: 50px 30px 50px 70px
+    +res-bl(md)
+        flex-direction: column
+    +res-bl(ms)
+        padding-left: 50px
+    .content
+        margin-right: 30px
+        +res-bl(md)
+            order: 2
+            margin-right: 0
+            margin-top: 20px
+        p
+            line-height: 1.68
+            margin-bottom: 10px
+            +res-ab(ms)
+                font-size: 18px
+        .author
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            h6
+                margin-right: 5px
+                margin-top: 10px
+                margin-bottom: 0
+                +res-ab(ms)
+                    font-size: 18px
+            span
+                margin-top: 10px
+    .image
+        width: 36%
+        flex: none
+    &:before
+        content: ''
+        left: 35px
+        top: -20px
+        z-index: -2
+        position: absolute
+        width: calc(100% - 70px)
+        height: calc(100% + 90px)
+        background: url(../images/testimonials/feedback-shape.png) no-repeat
+        background-size: 100% 100%
+    &:after
+        content: ''
+        +size(50%, 100%)
+        background: white
+        position: absolute
+        top: 0
+        right: 0
+        z-index: -1

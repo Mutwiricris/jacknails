@@ -1,0 +1,37 @@
+/*******************************************************/
+/********************** ## About ***********************/
+/*******************************************************/
+.about-content
+    max-width: 555px
+                
+.about-images
+    display: flex
+    position: relative
+    justify-content: space-between
+    .image
+        width: calc(50% - 10px)
+        img
+            width: 100%
+    .logo
+        +abs-middle()
+        max-width: 33%
+        img
+            border-radius: 50%
+            
+.mission-vision-content
+    .section-title
+        max-width: 500px
+    .tab-btn-one
+        button
+            border-radius: 0
+            border: 1px solid $border-color
+            +res-ab(sm)
+                padding: 11px 20px
+            +res-bl(xs)
+                margin-right: 5px
+                +gapLR(padding, 13px)
+            &:hover,
+            &.active
+                color: white
+                background: $primary-color
+                border-color: $primary-color

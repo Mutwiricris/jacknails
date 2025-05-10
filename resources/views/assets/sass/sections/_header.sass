@@ -1,0 +1,503 @@
+/*******************************************************/
+/******************* ## Header style ******************/
+/*******************************************************/
+.main-header
+    position: relative
+    left: 0px
+    top: 0px
+    z-index: 999
+    width: 100%
+    transition: all 500ms ease
+    .header-upper
+        z-index: 5
+        width: 100%
+        position: relative
+        transition: all 500ms ease
+    .logo-outer
+        flex: none
+        +res-bl(lg)
+            display: none
+    .logo
+        z-index: 9
+        padding: 2px 0
+        position: relative
+        margin-right: 25px
+    &.menu-absolute
+        .header-upper
+            position: absolute
+    &.fixed-header
+        .header-upper
+            top: 0
+            left: 0
+            position: fixed
+            background: white
+            animation: sticky  1s
+            box-shadow: 0px 0px 30px 0px rgba(87, 95, 245, .10)
+                            
+.header-top-inner
+    ul
+        flex-wrap: wrap
+        padding: 10px 0 1px
+        +flexcenter(center)
+        li
+            display: flex
+            line-height: 1.2
+            margin-bottom: 10px
+            align-items: center
+            i
+                margin-right: 10px
+            &:not(:last-child)
+                margin-right: 15px
+                padding-right: 15px
+                border-right: 1px solid rgba(255, 255, 255, 0.5)
+                +res-bl(xs)
+                    margin-left: 5px
+                    padding-right: 0
+                    margin-right: 5px
+                    border-right: none
+            
+.header-middle
+    border-bottom: 1px solid $border-color
+    +res-bl(sm)
+        display: none
+
+.header-middle-inner
+    padding-top: 25px
+    padding-bottom: 10px
+    +flexcenter(space-between)
+    .search-form,
+    .middle-right,
+    .middle-right > ul,
+    .middle-right > ul > li a
+        display: flex
+        align-items: center
+    .search-form
+        width: 30%
+        padding: 4px
+        max-width: 350px
+        margin-bottom: 15px
+        border-radius: 27px
+        border: 1px solid $border-color
+        +res-bl(lg)
+            width: 40%
+        input
+            width: 100%
+            border: none
+            padding: 8px 0 8px 20px
+        button
+            flex: none
+            color: white
+            +circle($primary-color, 44px)
+    .logo
+        margin-bottom: 15px
+        +res-bl(lg)
+            display: none
+    .middle-right
+        margin-bottom: 15px
+        .select
+            font-size: 14px
+            margin-right: 20px
+            text-transform: capitalize
+            padding: 10px 40px 10px 12px
+            +res-bl(md)
+                display: none
+            &:after
+                +size(7px)
+                right: 15px
+                margin-top: -6px
+                border-color: $base-color
+        > ul > li
+            line-height: 1.2
+            a
+                i
+                    font-size: 20px
+                    margin-right: 8px
+                    position: relative
+                    span
+                        top: -10px
+                        right: -7px
+                        color: white
+                        font-size: 12px
+                        font-weight: 700
+                        position: absolute
+                        +circle($primary-color, 18px)
+                b
+                    margin-left: 5px
+                    font-weight: 600
+            &:not(:last-child)
+                margin-right: 15px
+                padding-right: 15px
+                border-right: 1px solid $border-color
+    
+.nav-outer
+    margin-right: auto
+    +res-bl(lg)
+        width: 100%
+ 
+/** Header Main Menu **/
+.main-menu
+    +res-bl(lg)
+        width: 100%
+    .mobile-logo
+        margin-right: auto
+        +res-bl(sm)
+            max-width: 150px
+    .collapse
+        +res-bl(lg)
+            overflow: auto
+    .navbar-collapse
+        padding: 0px
+        > ul
+            display: flex
+            +res-bl(lg)
+                display: block
+                padding: 25px 0
+                background: #FFFFFF
+                > li:last-child
+                    border-bottom: 1px solid #f3f3f3
+        +res-bl(lg)
+            left: 0
+            width: 100%
+            position: absolute
+        li
+            padding: 7px 22px
+            +flexcenter(space-between)
+            +res-bl(xxl)
+                +gapLR(padding, 10px)
+            +res-bl(lg)
+                display: block
+                padding: 0 15px
+                border-top: 1px solid #f3f3f3
+            &.dropdown .dropdown-btn
+                cursor: pointer
+                font-size: 12px
+                margin-left: 5px
+                color: $heading-color
+                +res-bl(lg)
+                    position: absolute
+                    right: 10px
+                    top: 0
+                    width: 50px
+                    height: 43px
+                    border-left: 1px solid #f2f2f2
+                    text-align: center
+                    line-height: 43px
+            a
+                display: block
+                font-size: 16px
+                opacity: 1
+                font-weight: 500
+                position: relative
+                color: $heading-color
+                text-transform: capitalize
+                transition: all 500ms ease
+                +res-bl(lg)
+                    padding: 10px 10px
+                    line-height: 22px
+                &:hover
+                    color: $primary-color
+                    text-decoration: underline
+            &.current > a, &.current-menu-item > a
+                font-weight: 500
+            li
+                border-top: 1px solid #f3f3f3
+                a
+                    text-transform: capitalize
+                    &:before
+                        display: none
+            .megamenu
+                position: absolute
+                left: 0px
+                top: 100%
+                width: 100%
+                z-index: 100
+                display: none
+                padding: 20px 0
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +clearfix
+                +res-bl(lg)
+                    position: relative
+                    box-shadow: none
+                    width: 100%
+                    .container
+                        max-width: 100%
+                    .row
+                        margin: 0px
+                ul
+                    display: block
+                    position: relative
+                    top: 0
+                    width: 100%
+                    box-shadow: none
+            ul
+                position: absolute
+                left: inherit
+                top: 100%
+                min-width: 250px
+                z-index: 100
+                display: none
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +res-bl(lg)
+                    position: relative
+                    display: none
+                    width: 100%
+                    box-shadow: none
+                    +clearfix
+                    +res-bl(xs)
+                        min-width: auto
+                li
+                    width: 100%
+                    padding: 7px 20px
+                    +res-bl(lg)
+                        padding: 0 15px
+                    ul
+                        left: 100%
+                        top: 0%
+                        +res-bl(lg)
+                            left: auto
+
+    .navbar-header
+        display: none
+        margin-right: 30px
+        +res-bl(lg)
+            +flexcenter(start)
+        +res-bl(xs)
+            margin-right: 20px
+        .navbar-toggle
+            float: right
+            padding: 4px 0
+            cursor: pointer
+            background: transparent
+            .icon-bar
+                background: $base-color
+                height: 2px
+                width: 30px
+                display: block
+                margin: 7px 0
+        
+/* Menu Right */
+.menu-right
+    margin-bottom: 10px
+    +res-bl(sm)
+        display: none
+    ul
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        li
+            a
+                font-weight: 500
+                i
+                    transition: 0.5s
+                    margin-right: 10px
+                &:hover
+                    color: $heading-color
+                    i
+                        color: $primary-color
+            &:not(:last-child)
+                margin-right: 15px
+                padding-right: 15px
+                border-right: 1px solid $border-color
+            
+/* Header Search */
+.nav-search
+    position: relative
+    margin-right: auto
+    margin-left: 15px
+    +res-bl(sm)
+        display: none
+    button
+        display: flex
+        background: transparent
+        i
+            font-size: 20px
+            margin-right: 8px
+    form
+        position: absolute
+        width: 320px
+        top: 35px
+        right: 0
+        z-index: 777
+        padding: 10px
+        +flexcenter(center)
+        background-color: #fff
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05)
+        &.hide
+            display: none
+        input
+            border: none
+            padding: 15px 5px 15px 25px
+        button
+            padding: 15px 20px 15px 0
+    
+/* Header One */
+.main-header.header-one
+    .main-menu
+        margin-bottom: 10px
+        .navigation 
+            > li 
+                &:first-child
+                    +res-ab(lg)
+                        padding-left: 0
+        .navbar-header
+            +res-bl(lg)
+                margin-right: 0
+        
+/* Header Two */
+.header-inner
+    .category-accordion
+        margin-top: -2px
+        margin-right: 10px
+        position: relative
+        +res-bl(xxl)
+            margin-right: 20px
+        +res-bl(lg)
+            display: none
+        .accordion-item
+            border: none
+            border-radius: 0
+            .accordion-button
+                color: white
+                border: none
+                font-size: 16px
+                font-weight: 600
+                border-radius: 0
+                box-shadow: none
+                min-width: 313px
+                padding: 18px 25px
+                background: $primary-color
+                > i
+                    font-weight: 400
+                    margin-right: 10px
+                &:after
+                    +size(auto)
+                    content: "\f107"
+                    font-weight: 400
+                    transform: rotate(0)
+                    background-image: none
+                    font-family: 'Font Awesome 5 Pro'
+                &.collapsed
+                    border-radius: 0
+            .accordion-collapse
+                position: absolute
+                width: 100%
+                background: white
+                border: 1px solid $border-color
+                .accordion-body
+                    overflow: auto
+                    padding: 0 30px
+                    transition: 0.5s
+                    max-height: 75vh
+                    &::-webkit-scrollbar
+                        width: 5px
+                    &::-webkit-scrollbar-track
+                        background: $lighter-color
+                    &::-webkit-scrollbar-thumb
+                        background: #e3e3e3
+                        &:hover
+                            background: gray
+    
+.main-header.header-two
+    .logo
+        z-index: 1
+    .header-top-inner
+        flex-wrap: wrap
+        +flexcenter(space-between)
+        +res-bl(lg)
+            justify-content: center
+            +gapLR(margin, -15px)
+            ul, shop-text
+                +gapLR(margin, 15px)
+        ul
+            li
+                border-color: #CECECE
+        .shop-text
+            a
+                color: $primary-color
+    .header-middle
+        +res-bl(lg)
+            display: none
+                
+    .header-middle-inner
+        .search-form
+            width: 45%
+            max-width: none
+            border-radius: 2px
+            .nice-select
+                border: none
+                font-size: 15px
+                color: $base-color
+                width: max-content
+                background: $lighter-color
+                padding: 15px 45px 15px 20px
+                +res-bl(xl)
+                    display: none
+                .list
+                    min-width: max-content
+                &:after
+                    margin-top: -6px
+                    border-color: #999999
+            button
+                +size(auto)
+                line-height: 1
+                padding: 17px 28px
+                border-radius: 2px
+                text-transform: capitalize
+    .navbar-header
+        margin-right: 0
+    .menu-right
+        +res-bl(xl)
+            display: none
+            
+    &.fixed-header
+        .category-accordion .accordion-item .accordion-collapse .accordion-body
+            max-height: 310px
+            
+/* Header Three */
+.main-header.header-three
+    .header-top
+        +res-bl(md)
+            display: none
+    .header-top-inner
+        +flexcenter(space-between)
+        > ul
+            &:last-child
+                z-index: 1
+                padding-left: 55px
+                position: relative
+                &:after
+                    content: ''
+                    left: 0
+                    top: 0
+                    z-index: -1
+                    +size(50vw, 100%)
+                    position: absolute
+                    background: $primary-color
+                    clip-path: polygon(20px 0%, 100% 0, 100% 100%, 0% 100%)
+    .header-middle-inner
+        padding: 0
+        position: relative
+        .middle-right
+            margin-bottom: 0
+            +res-bl(md)
+                display: none
+            li
+                &:first-child
+                    +res-bl(xl)
+                        display: none
+    .logo,
+    .mobile-logo
+        padding: 0
+        margin-bottom: 0
+        a
+            padding: 30px
+            border-radius: 50px
+            display: inline-block
+            background: $primary-color
+            +res-bl(lg)
+                +gapTB(padding, 20px)
+    .navbar-header
+        +res-bl(md)
+            margin-right: 0

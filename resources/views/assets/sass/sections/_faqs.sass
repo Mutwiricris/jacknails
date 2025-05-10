@@ -1,0 +1,149 @@
+/*******************************************************/
+/*********************** ## FAQs ***********************/
+/*******************************************************/
+.accordion
+    .accordion-item
+        border: none
+        border-radius: 0
+        margin-bottom: 20px
+        background: $lighter-color
+        .accordion-header
+            > button
+                width: 100%
+                display: flex
+                padding: 18px 25px
+                background: transparent
+                justify-content: space-between
+                .icon
+                    &:before
+                        content: '\f056'
+                        font-family: 'font awesome 5 pro'
+                &.collapsed
+                    .icon:before
+                        content: '\f055'
+        .accordion-body
+            padding: 0 25px 22px
+    
+/* FAQ Page */
+.faq-search
+    form
+        padding: 5px
+        display: flex
+        align-items: center
+        border-radius: 3px
+        border: 1px solid $border-color
+        input
+            border: none
+            padding: 15px 25px
+        button
+            +size(68px)
+            color: white
+            line-height: 70px
+            text-align: center
+            border-radius: 3px
+            background: $primary-color
+            
+.live-chat
+    border-radius: 3px
+    padding: 20px 40px
+    background: $lighter-color
+    display: flex
+    align-items: center
+    +res-bl(md)
+        padding: 35px
+        display: block
+        text-align: center
+    .icon
+        +size(60px)
+        flex: none
+        color: white
+        font-size: 20px
+        line-height: 60px
+        margin-right: 20px
+        text-align: center
+        background: $primary-color
+        +res-bl(md)
+            +gapLR(margin, auto)
+            margin-bottom: 20px
+    .content
+        margin-right: auto
+        h6
+            +gapTB(margin, 5px)
+            +res-ab(sm)
+                font-size: 18px
+        p
+            &:last-child
+                margin-bottom: 0
+    .theme-btn
+        flex: none
+        margin-left: 10px
+        border-radius: 3px
+        +gapLR(padding, 25px)
+        +res-bl(md)
+            margin: 20px 0 0
+
+.faq-tabs
+    padding: 30px
+    border-radius: 3px
+    background: $heading-color
+    .title
+        color: white
+        margin-bottom: 28px
+    .accordion-item
+        margin-bottom: 0
+        background: transparent
+        .accordion-header
+            > button
+                padding: 0
+                color: #B3B3B3
+                text-align: left
+                font-weight: 500
+                font-family: $base-font
+                background: transparent
+                .icon
+                    &:before
+                        content: '\f106'
+                &.collapsed
+                    .icon:before
+                        content: '\f107'
+        .accordion-body
+            color: #B3B3B3
+            padding: 15px 0 0
+            .nav
+                align-items: start
+                flex-direction: column
+                button
+                    padding: 0
+                    color: #B3B3B3
+                    transition: 0.5s
+                    background-color: transparent
+                    &.active
+                        color: $primary-color
+                    &:not(:last-child)
+                        margin-bottom: 9px
+        &:not(:last-child)
+            margin-bottom: 15px
+            > .accordion-header > button
+                padding-bottom: 15px
+                border-bottom: 1px solid #414141
+            .accordion-body
+                padding-bottom: 15px
+                border-bottom: 1px solid #414141
+                
+.accordion-content
+    .accordion-item
+        .accordion-header
+            +res-ab(xs)
+                font-size: 18px
+                > button
+                    padding: 24px 30px
+            > button
+                text-align: left
+                .icon
+                    font-size: 16px
+                    transition: 0.5s
+                    margin-left: 5px
+                    color: $primary-color
+                &.collapsed
+                    .icon
+                        color: $base-color

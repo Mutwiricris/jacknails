@@ -1,0 +1,257 @@
+/*******************************************************/
+/***************** ## Sidebar Widgets *****************/
+/*******************************************************/
+.widget
+    padding: 35px
+    border: 1px solid $border-color
+    +res-bl(xl)
+        +gapLR(padding, 25px)
+    &:not(:last-child)
+        margin-bottom: 30px
+        
+.widget-title
+    display: flex
+    font-size: 18px
+    font-weight: 700
+    position: relative
+    margin-bottom: 28px
+    text-transform: capitalize
+    &:after,
+    &:before
+        content: ''
+        height: 2px
+        background: $primary-color
+    &:before
+        width: 20px
+        margin-top: 12px
+        margin-right: 10px
+    &:after
+        position: absolute
+        width: 12px
+        left: 8px
+        top: 7px
+    
+.widget-search
+    padding: 5px
+    form
+        display: flex
+        align-items: center
+        input
+            border: none
+            padding: 15px 20px
+        button
+            flex: none
+            +size(58px)
+            color: white
+            line-height: 58px
+            text-align: center
+            border-radius: 3px
+            background: $primary-color
+            
+.widget-menu
+    ul
+        li
+            
+            a
+                display: flex
+                text-transform: capitalize
+                &:before
+                    flex: none
+                    transition: 0.5s
+                    content: "\f111"
+                    margin-right: 10px
+                    font-family: "Font Awesome 5 Pro"
+                span
+                    margin-left: 5px
+                &:hover
+                    &:before
+                        content: '\f192'
+                        color: $primary-color
+            &:not(:last-child)
+                margin-bottom: 15px
+                a
+                    padding-bottom: 15px
+                    border-bottom: 1px solid $border-color
+                    &:hover
+                        border-color: $primary-color
+                
+.widget-category
+    ul
+        li
+            
+            a
+                display: flex
+                text-transform: capitalize
+                &:after
+                    flex: none
+                    transition: 0.5s
+                    content: "\f0a9"
+                    margin-left: auto
+                    font-family: "Font Awesome 5 Pro"
+                span
+                    +gapLR(margin, 5px)
+            &:not(:last-child)
+                margin-bottom: 15px
+                a
+                    padding-bottom: 15px
+                    border-bottom: 1px solid $border-color
+                    &:hover
+                        border-color: $primary-color
+                
+.price-filter-wrap
+    .btn-price
+        display: flex
+        align-items: center
+        button
+            color: white
+            font-size: 14px
+            font-weight: 500
+            padding: 7px 18px
+            margin-right: 20px
+            text-transform: uppercase
+            background: $primary-color
+        input
+            padding: 0
+            width: auto
+            border: none
+            font-size: 16px
+            font-weight: 500
+            color: $heading-color
+.ui-widget.ui-widget-content
+    height: 5px
+    border: none
+    cursor: pointer
+    margin-bottom: 35px
+    background: $border-color
+.ui-widget-header
+    background: $primary-color
+.ui-slider .ui-slider-handle
+    +size(15px)
+    top: -5px
+    border: none
+    cursor: e-resize
+    border-radius: 50%
+    border: 2px solid white
+    background: $primary-color
+                
+.widget-color
+    ul
+        li
+            
+            a
+                display: flex
+                font-weight: 500
+                align-items: center
+                span
+                    +size(15px)
+                    margin-right: 8px
+                    border-radius: 50%
+                    background: $lighter-color
+                    &.pink
+                        background: #FF9FF3
+                    &.red
+                        background: $primary-color
+                    &.yellow
+                        background: #FECA57
+                    &.green
+                        background: #1DD1A1
+                    &.blue
+                        background: #0ABDE3
+                &:after
+                    content: "\f105"
+                    margin-left: auto
+                    font-family: "Font Awesome 5 Pro"
+            &:not(:last-child)
+                margin-bottom: 14px
+                padding-bottom: 14px
+                border-bottom: 1px solid $border-color
+            
+.widget-post
+    ul > li
+        display: flex
+        align-items: center
+        .image
+            flex: none
+            max-width: 100px
+            margin-right: 20px
+            +res-bt(lg, xl)
+                max-width: 80px
+                margin-right: 15px
+            +res-bl(xs)
+                max-width: 80px
+                margin-right: 15px
+        .content
+            b
+                display: block
+                font-weight: 500
+                font-size: 14px
+                margin-bottom: 5px
+            h6
+                margin-bottom: 0
+                line-height: 1.65
+                +res-bt(lg, xl)
+                    font-size: 14px
+                    line-height: 1.4
+                +res-bl(xs)
+                    font-size: 14px
+                    line-height: 1.4
+        &:not(:last-child)
+            margin-bottom: 25px
+            padding-bottom: 25px
+            border-bottom: 1px solid $border-color
+        
+.widget-products
+    ul > li
+        display: flex
+        align-items: center
+        .image
+            +size(70px)
+            flex: none
+            padding: 10px
+            +flexcenter(center)
+            margin-right: 20px
+            background: $lighter-color
+        &:not(:last-child)
+            margin-bottom: 20px
+            padding-bottom: 20px
+            border-bottom: 1px solid $border-color
+
+.tag-coulds
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px -10px 0
+    a
+        font-size: 14px
+        font-weight: 500
+        padding: 7px 25px
+        margin: 0 10px 10px 0
+        text-transform: capitalize
+        background: $lighter-color
+        &:hover
+            color: white
+            background: $primary-color
+        
+.widget-cta
+    padding: 0
+    border: none
+    .cta-widget-inner
+        padding: 45px
+        min-height: 515px
+        +flexcenter(center)
+        text-align: center
+        background-size: cover
+        background-position: center
+        h2
+            margin-bottom: 0
+            text-transform: uppercase
+            a:not(:hover)
+                color: white
+            +res-ab(sm)
+                font-size: 50px
+
+/* Shop Sidebar */
+.shop-sidebar
+    .widget
+        padding: 30px
+        .widget-title
+            font-weight: 600

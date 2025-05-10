@@ -1,0 +1,308 @@
+/*******************************************************/
+/******************* ## Main Slider *******************/
+/*******************************************************/
+.main-slider-area
+    overflow: hidden
+    +gapTB(padding, 115px)
+    +res-bl(sm)
+        +gapTB(padding, 80px)
+    &:after,
+    &:before
+        content: ''
+        top: 0
+        z-index: -2
+        +size(40%, 100%)
+        position: absolute
+        background-size: cover
+        animation: zoomInOut 5s infinite
+        background-position: center center
+        +res-bl(lg)
+            +size(100%, 50%)
+    &:before
+        left: 0
+        background-image: url(../images/slider/slider-left-bg.png);
+    &:after
+        right: 0
+        background-image: url(../images/slider/slider-right-bg.png);
+        +res-bl(lg)
+            bottom: 0
+            
+    
+.main-slider-active
+    width: 100%
+    .slick-list
+        overflow: visible
+        
+.slider-left-content
+    z-index: 2
+    position: relative
+    .offer-text
+        font-size: 24px
+        font-weight: 600
+        @extend %heading
+        align-items: center
+        margin-bottom: 15px
+        display: inline-flex
+        +res-bl(xs)
+            font-size: 20px
+        .badge
+            color: white
+            font-size: 14px
+            font-weight: 500
+            border-radius: 3px
+            margin-right: 15px
+            padding: 12px 12px 10px
+            font-family: $base-font
+            text-transform: uppercase
+            background: $primary-color
+    h1
+        margin-bottom: 0
+        text-transform: uppercase
+        +res-bl(xl)
+            font-size: 60px
+            line-height: 1.2
+        +res-bl(sm)
+            font-size: 50px
+        +res-bl(xs)
+            font-size: 40px
+            
+.slider-right-content
+    h3
+        margin-bottom: 20px
+        text-transform: uppercase
+        +res-bl(xl)
+            font-size: 27px
+            line-height: 1.35
+        +res-bl(xs)
+            font-size: 25px
+    p
+        font-size: 18px
+        font-weight: 500
+        margin-bottom: 30px
+        
+.slider-middle-image
+    z-index: 1
+    position: relative
+    padding: 20px 0 0 20px
+    img
+        width: 100%
+        border-radius: 0 60px
+    &:before
+        content: ''
+        +size(92%)
+        left: 0
+        top: 0
+        z-index: -1
+        position: absolute
+        border-radius: 0 60px
+        border: 3px solid $primary-color
+    
+.main-slider-active
+    .slick-arrow
+        +size(40px, 100px)
+        position: absolute
+        line-height: 100px
+        top: 50%
+        z-index: 2
+        font-size: 22px
+        box-shadow: none
+        transition: 0.5s
+        color: $base-color
+        transform: translateY(-50%)
+        background: rgba(205, 205, 205, 0.5);
+        &.slider-prev
+            left: 0
+            border-radius: 0 5px 5px 0
+        &.slider-next
+            right: 0
+            border-radius: 5px 0 0 5px
+        &:hover
+            background: white
+
+.slider-middle-image,
+.slider-left-content,
+.slider-right-content
+    transition: 1s
+    animation-duration: 1s
+    animation-fill-mode: both
+    
+.slick-active
+    .slider-middle-image,
+    .slider-left-content,
+    .slider-right-content
+        animation-name: fadeInRight
+    .slider-left-content
+        animation-delay: 0.4s
+    .slider-middle-image
+        animation-delay: 0.6s
+    .slider-right-content
+        animation-delay: 0.8s
+        
+/* Slider Two */
+.slider-two-inner
+    +res-ab(lg)
+        margin-left: 343px
+.slider-slide-part
+    border-radius: 5px
+    padding: 120px 80px
+    +res-bl(md)
+        padding: 100px 35px 120px
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    .slider-two-content
+        max-width: 330px
+        .sub-title
+            display: flex
+            font-weight: 500
+            margin-bottom: 15px
+            align-items: center
+            text-transform: uppercase
+            +res-ab(xs)
+                font-size: 16px
+            &:before
+                content: ''
+                +size(20px)
+                margin-right: 6px
+                background: url(../images/slider/subtitle-before.png) no-repeat center/cover
+        h2
+            margin-bottom: 20px
+            +res-ab(xl)
+                font-size: 50px
+            +res-bl(sm)
+                font-size: 35px
+            +res-bl(xs)
+                font-size: 30px
+        p
+            font-weight: 500
+            margin-bottom: 30px
+            +res-ab(xs)
+                font-size: 18px
+    .slick-dots
+        position: absolute
+        margin-top: 70px
+        li
+            border: none
+            opacity: 0.6
+            background: white
+            &.slick-active
+                opacity: 1
+                
+.slider-two-content
+    .sub-title, h2, p, .theme-btn
+        transition: 1s
+        animation-duration: 1s
+        animation-fill-mode: both
+    
+.slick-active
+    .slider-two-content
+        .sub-title, h2, p, .theme-btn
+            animation-name: fadeInRight
+        .sub-title
+            animation-delay: 0.3s
+        h2
+            animation-delay: 0.4s
+        p
+            animation-delay: 0.5s
+        .theme-btn
+            animation-delay: 0.6s
+            
+/* Slider Three */
+.slider-three-item
+    +flexcenter(space-between)
+    .slider-three-content
+        max-width: 465px
+        .sub-title
+            font-weight: 500
+            margin-bottom: 10px
+            color: $primary-color
+            display: inline-block
+            text-transform: uppercase
+        h2
+            font-weight: 800
+            margin-bottom: 15px
+            text-transform: uppercase
+            span
+                color: $primary-color
+            +res-ab(md)
+                font-size: 60px
+                line-height: 1.17
+            +res-bl(ms)
+                font-size: 33px
+        h3
+            font-weight: 500
+            margin-bottom: 33px
+            +res-bl(md)
+                font-size: 30px
+            +res-bl(ms)
+                font-size: 25px
+    .offer-text
+        +size(170px)
+        color: white
+        font-size: 45px
+        line-height: 1
+        margin-top: 50px
+        font-weight: 500
+        +flexcenter(center)
+        flex-direction: column
+        text-transform: uppercase
+        background: url(../images/slider/offer-text-bg.png) no-repeat
+        background-size: 100% 100%
+        +res-bl(md)
+            display: none
+        
+.slider-three-active
+    max-width: 750px
+    .slider-three-item
+        display: flex
+    .slick-dots
+        margin-top: 100px
+        position: absolute
+        +res-bl(lg)
+            margin-top: 50px
+        li
+            +size(15px)
+            border: 1px solid $primary-color
+            &:not(.slick-active)
+                background: transparent
+            &:not(:last-child)
+                margin-right: 10px
+.slider-three-content
+    .sub-title, h2, h3, .theme-btn
+        transition: 1s
+        animation-duration: 1s
+        animation-fill-mode: both
+    
+.slick-active
+    .slider-three-content
+        .sub-title, h2, h3, .theme-btn
+            animation-name: fadeInRight
+        .sub-title
+            animation-delay: 0.3s
+        h2
+            animation-delay: 0.45s
+        h3
+            animation-delay: 0.6s
+        .theme-btn
+            animation-delay: 0.75s
+            
+.slider-shapes
+    .shape
+        z-index: -1
+        max-width: 15%
+        position: absolute
+        &.one
+            top: 7%
+            left: 5%
+            animation: down-up-one 8s infinite
+        &.two
+            left: 0
+            bottom: 6%
+            animation: leftRightOne 20s infinite
+        &.three
+            left: 36%
+            top: 8%
+            animation: down-up-one 8s infinite
+        &.four
+            left: 42%
+            bottom: 4%
+            animation: zoomInOut 5s infinite
