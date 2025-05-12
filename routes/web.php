@@ -16,8 +16,7 @@ Route::get('/book-an-appointment', [BookingController::class, 'book'])->name('bo
 Route::get('/selectDateTime', [BookingController::class, 'DateTime'])->name('booking.DateTime');
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 Route::get('/booking-confirmation', [BookingController::class, 'confirmation'])->name('booking.confirmation');
-
-// Authentication routes
+Route::get('/get-available-time-slots', [BookingController::class, 'getAvailableTimeSlots']);// Authentication routes
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
@@ -46,7 +45,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('/admin/timeslots', [DashboardController::class, 'storeTimeSlot'])->name('admin.timeslots.store');
     Route::delete('/admin/timeslots/{id}', [DashboardController::class, 'deleteTimeSlot'])->name('admin.timeslots.delete');
     // Route::post('/admin/timeslots/{id}/reactivate', [DashboardController::class, 'reactivateTimeSlot'])->name('admin.timeslot.reactivate'); // If implementing reactivate
-
+	Route::get('/admin/bookings/calendar-events', [DashboardController::class, 'getCalendarEvents'])->name('admin.bookings.calendar-events');
     Route::get('/admin/reports', [DashboardController::class, 'reports'])->name('admin.reports');
 });
 

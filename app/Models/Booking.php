@@ -72,4 +72,5 @@ class Booking extends Model
             })
             ->implode(', ');
     }
+
 }
